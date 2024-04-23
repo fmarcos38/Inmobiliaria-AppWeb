@@ -1,0 +1,8 @@
+.fijo {
+    display: block;
+    position: fixed;
+    right: 2vw;
+    bottom: 5vw;
+    z-index: 93;
+    font-size: 1.5vw;
+}

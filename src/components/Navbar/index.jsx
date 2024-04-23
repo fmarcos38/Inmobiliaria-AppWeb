@@ -48,6 +48,7 @@ function Navbar() {
                         </li>
                     </ul>
                 </div>
+                
                 {/* menu Derecha */}
                 <div className='contDer'>
                     {/* menu Derecho Pantalla Grabde */}            

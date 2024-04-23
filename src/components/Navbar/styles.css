@@ -63,14 +63,6 @@ a {
 }
 
 /* menu hambur pantalla chica*/
-.menu-icon {
-    width: 30px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
 .menu-icon span {
     width: 100%;
     height: 3px;
@@ -139,8 +131,7 @@ a {
     }
     a {
         text-decoration: none;
-    }
-    
+    }    
     .menu-icon {
         display: none;
     }
@@ -161,5 +152,44 @@ a {
     }
     .contDer{
         font-size: small;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        width: 100vw;
+        margin-bottom: 8px;
+        height: 3.5rem;
+    }
+    .conteiner-navbar{        
+        width: 90vw;
+        height: 3.5rem; 
+        display: flex;
+        justify-content: space-around;       
+    }
+    .contIzq{
+        width: 70%;
+    }
+    .contDer{
+        width: 30%;
+    }
+    .cont-Tel-Redes{
+        display: none;
+    }
+    .ul-menu-izq{
+        display: none;
+    }
+    /* menu hambur pantalla chica*/
+    .menu-icon {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .menu {        
+        top: 60px;
+        right: 0;
     }
 }

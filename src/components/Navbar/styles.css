@@ -1,24 +1,28 @@
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
+    height: 4.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b1b5b5;
+    box-shadow: 0 0 10px #9a9d9d;
     background-color: rgba(132, 214, 157, 0.644);
 }
 .conteiner-navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 80vw;
-    height: 5rem;
+    height: 4.5rem;
 }
 .contIzq{
     display: flex;
     justify-content: center;
     align-items: center; 
     width: 60vw;
-    height: 4rem;
-    /* background-color: beige; */
+    height: 4.5rem;
+}
+.logo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .ul-menu-izq{
     display: flex;
@@ -33,18 +37,17 @@ li {
 a {
     text-decoration: none;
 }
-.logo{
-    height: auto;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+
+/* lado der */
 .contDer{
     display: flex;
     justify-content: end;
     align-items: center; 
     width: 30vw;
     height: 4rem;
+}
+.cont-Tel-Redes{
+    margin-right: 0.5rem;
 }
 .iconosRedes{
     font-size: large;
@@ -57,4 +60,106 @@ a {
 .direccion p {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+/* menu hambur pantalla chica*/
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.menu-icon span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-icon.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-icon.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* menu desplegable del hambur*/
+.menu {
+    position: absolute;
+    top: 70px;
+    right: 1;
+    background: #f9f9f9;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.menu li:hover {
+    background: #eaeaea;
+}
+
+/* responsive */
+@media screen and (min-width: 1024px){
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px){    
+    .contIzq{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: 45vw;
+        height: 4rem;
+    }
+    .contDer{
+        display: flex;
+        justify-content: end;
+        align-items: center; 
+        width: 45vw;
+        height: 4rem;
+    }
+    li {
+        list-style: none;
+        margin-right: 0.5rem;
+        font-size: medium;
+    }
+    a {
+        text-decoration: none;
+    }
+    
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 772px) {
+    nav {
+        width: 100vw;
+        margin-bottom: 8px;
+    }
+    .conteiner-navbar{        
+        width: 90vw;
+        height: 4rem;        
+    }
+    .contIzq{
+        font-size: small;
+        margin-left: 2.5rem;
+    }
+    .contDer{
+        font-size: small;
+    }
 }

@@ -6,52 +6,61 @@ import { Link } from 'react-router-dom';
 
 function Footbar() {
     return (
-        <footer className="footer">
-            <div className='divF'>
-                <a href='/home'>
-                    <img
-                        src='https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png' alt='not found'
-                        className='iso'
-                    />
-                </a>
-                <ul>
-                    <li>
-                        <h4>
-                            <p>CONTACTANOS</p>
-                        </h4>
-                        <p>
-                            Belgrano 2214 - Mar del Plata
-                            <br></br>
-                            Teléfono (0223) 4915977
-                            <br></br>
-                            Whatsapp +54 9 (223) 6349596
-                            <br></br>
-                            info@belluccipropiedades.com
-                            <br></br>
-                        </p>
-                    </li>
+        <footer className='contFooter'>
+            <div className="footer">
+                <div className='divF'>
+                    <a href='/home'>
+                        <img
+                            src='https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png' alt='not found'
+                            className='iso'
+                        />
+                    </a>
+                    <ul>
+                        <li>
+                            <h4>
+                                <p>CONTACTANOS</p>
+                            </h4>
+                            <p>
+                                Belgrano 2214 - Mar del Plata
+                                <br></br>
+                                Teléfono (0223) 4915977
+                                <br></br>
+                                Whatsapp +54 9 (223) 6349596
+                                <br></br>
+                                info@belluccipropiedades.com
+                                <br></br>
+                            </p>
+                        </li>
 
-                    <li>
-                        <h4>
-                            <p>Links</p>
-                        </h4>
-                        <div className='divLinks'>
-                            <Link>Ventas</Link>
-                            <Link>Alquileres</Link>
-                            <Link>Locales</Link>
-                        </div>
-                    </li>
+                        <li>
+                            <h4>
+                                <p>Links</p>
+                            </h4>
+                            <div className='divLinks'>
+                                <Link>Ventas</Link>
+                                <Link>Alquileres</Link>
+                                <Link>Locales</Link>
+                            </div>
+                        </li>
 
-                    <li>
-                        <h4><p>Seguinos</p></h4>
-                        <a href='https://www.instagram.com/florm.bienesraices/'>
-                            <InstagramIcon className='iconosRedes' />
-                        </a>
-                        <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                            <WhatsAppIcon className='iconosRedes' />
-                        </a>
-                    </li>
-                </ul>
+                        <li>
+                            <h4><p>Seguinos</p></h4>
+                            <a href='https://www.instagram.com/florm.bienesraices/'>
+                                <InstagramIcon className='iconosRedes' />
+                            </a>
+                            <a href='http://api.whatsapp.com/send?phone=2234422665'>
+                                <WhatsAppIcon className='iconosRedes' />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div className='contTodasMedidas'>
+                <div className='line'></div>
+                <span>
+                    Todas las medidas enunciadas son meramente orientativas, las medidas exactas serán las que se expresen en el respectivo título de propiedad de cada inmueble. Todas las fotos, imagenes y videos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales..
+                </span>
             </div>
         </footer>
     )

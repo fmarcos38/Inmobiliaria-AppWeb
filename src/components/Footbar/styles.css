@@ -1,34 +1,39 @@
-.footer {
+.contFooter{
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
     background-color: #787a78a4;
+}
+.footer {
+    width: 80%;
     color: #fff;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .divF{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 footer ul {
     display: flex;
-    justify-content: center;
-    width: 90%;
+    width: 100%;
 }
 footer .iso {
     width: 70px;
     height: auto;
-    margin-left: 25px;
 }
 footer ul li {
     display: inline-block;
     position: relative;
-    overflow: hidden;
-    width: 30%;
+    width: 35%;
 }
 footer ul li h4 {
     display: block;
@@ -56,7 +61,24 @@ footer ul li p {
     display: flex;
     flex-direction: column;
 }
-
+.contTodasMedidas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;  
+}
+.line {
+    margin-top: 10px;
+    width: 100%; /* Ancho de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: #e3e8ea; /* Color de la línea */
+}
+footer span {
+    width: 90%;
+    font-size: small;
+    margin-bottom: 3px;
+}
 
 @media screen and (max-width: 600px) {
     .divF{

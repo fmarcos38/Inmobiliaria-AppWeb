@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import './styles.css';
 import { NavLink } from 'react-router-dom';
-//import logo from '../../Imagenes/logo-osmosis.svg';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-
 
 
 function Navbar() {

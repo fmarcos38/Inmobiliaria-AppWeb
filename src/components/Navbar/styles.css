@@ -1,5 +1,8 @@
 nav {
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 4.5rem;
     margin-bottom: 10px;
     border-bottom: 1px solid #b1b5b5;
@@ -7,16 +10,17 @@ nav {
     background-color: rgba(132, 214, 157, 0.644);
 }
 .conteiner-navbar{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     height: 4.5rem;
 }
 .contIzq{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center; 
-    width: 60vw;
+    width: 60%;
     height: 4.5rem;
 }
 .logo{
@@ -43,19 +47,13 @@ a {
     display: flex;
     justify-content: end;
     align-items: center; 
-    width: 30vw;
-    height: 4rem;
-}
-.cont-Tel-Redes{
-    margin-right: 0.5rem;
-}
-.iconosRedes{
-    font-size: large;
+    width: 40%;
+    height: 4.5rem;
 }
 .direccion{
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;    
 }
 .direccion p {
     margin-left: 5px;

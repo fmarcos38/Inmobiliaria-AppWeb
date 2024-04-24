@@ -52,22 +52,13 @@ function Navbar() {
                 {/* menu Derecha */}
                 <div className='contDer'>
                     {/* menu Derecho Pantalla Grabde */}            
-                    <div className='cont-Tel-Redes'>
-                        <div className='direccion'>
-                            <LocationOnIcon />
-                            <p>Sarmiento 2323</p>
-                            <LocalPhoneIcon />
-                            <p>2234422665</p>
-                        </div>
-                        <div className='redes'>
-                            <a href='https://www.instagram.com/florm.bienesraices/' className='iconosRedes'>
-                                <InstagramIcon />
-                            </a>
-                            <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                                <WhatsAppIcon />
-                            </a>
-                        </div>                        
-                    </div>
+                    <div className='direccion'>
+                        <LocationOnIcon />
+                        <p>Sarmiento 2323</p>
+                        <LocalPhoneIcon />
+                        <p>2234422665</p>
+                    </div>                                                
+
                     {/* menu hambur P.Chica */}
                     <div 
                         className={`menu-icon ${isOpen ? 'open' : ''}`} 
@@ -77,6 +68,7 @@ function Navbar() {
                         <span></span>
                         <span></span>
                     </div>
+                    {/* menu desplegable */}
                     <div className="menu">
                         {
                             isOpen && (

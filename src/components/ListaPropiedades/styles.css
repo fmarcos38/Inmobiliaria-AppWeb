@@ -1,0 +1,19 @@
+.contListaP{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+}
+
+
+@media screen and (max-width: 700px) {
+    .contListaP{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+}

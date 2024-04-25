@@ -1,6 +1,7 @@
 .contFooter{
+    /*
     position: fixed;
-    bottom: 0;
+    bottom: 0; */ /*SI quiero q qde fija como pie de pag o en el view heigth*/
     left: 0;
     width: 100%;  
     display: flex;

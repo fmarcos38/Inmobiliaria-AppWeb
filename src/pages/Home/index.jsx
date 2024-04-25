@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import './styles.css';
+import ListaPropiedades from '../../components/ListaPropiedades';
 
 function Home() {
     return (
-        <div>Home</div>
+        <div className='contHome'>
+            <ListaPropiedades/>
+        </div>
     )
 }
 

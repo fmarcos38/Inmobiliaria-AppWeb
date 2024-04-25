@@ -1,0 +1,17 @@
+.contCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    background-color: blueviolet;
+}
+
+@media screen and (max-width: 700px) {
+    .contCard{        
+        width: 300px;
+        background-color: blueviolet;
+    }
+    
+}

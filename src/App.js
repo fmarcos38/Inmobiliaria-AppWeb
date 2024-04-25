@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Redes from './components/Redes';
 import Footbar from './components/Footbar';
+import Card from './components/Card/Card1';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
 
       <Routes>
         <Route path='/home' element={<Home/>} />
+        {/* rutas para el desarrollador */}
+        <Route path='/card' element={<Card/>}/>
       </Routes>
 
       <Footbar/>

@@ -38,9 +38,14 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li>
-                        <a href='#'>
-                            Contacto
-                        </a>
+                            <NavLink to='#' >
+                                Oportunidades
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='#' >
+                                Contacto
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

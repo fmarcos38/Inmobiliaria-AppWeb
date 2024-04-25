@@ -22,13 +22,15 @@ function ListaPropiedades() {
                                     id={p.id}
                                     operacion={p.operacion}
                                     tipo={p.tipo}
-                                    hambientes={p.hambientes}
+                                    ambientes={p.ambientes}
+                                    dormitorios={p.dormitorios}
                                     baños={p.baños}
                                     sup={p.sup}
                                     direccion={p.direccion}
                                     barrio={p.barrio}
                                     imagenes={p.imagenes}
                                     descripcion_Breve={p.descripcion_Breve}
+                                    precio={p.precio}
                                 />
                             </div>
                         )

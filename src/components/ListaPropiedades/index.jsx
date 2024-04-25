@@ -1,8 +1,8 @@
 import React from 'react'
 import { propiedades } from '../../Helps/propiedades.js';
 import Card1 from '../Card/Card1';
-import Card2 from '../Card/Card2';
-import Card3 from '../Card/Card3';
+/* import Card2 from '../Card/Card2';
+import Card3 from '../Card/Card3'; */
 import './styles.css';
 
 function ListaPropiedades() {
@@ -20,6 +20,7 @@ function ListaPropiedades() {
                                 <Card1
                                     key={p.id}
                                     id={p.id}
+                                    operacion={p.operacion}
                                     tipo={p.tipo}
                                     hambientes={p.hambientes}
                                     baños={p.baños}
@@ -27,6 +28,7 @@ function ListaPropiedades() {
                                     direccion={p.direccion}
                                     barrio={p.barrio}
                                     imagenes={p.imagenes}
+                                    descripcion_Breve={p.descripcion_Breve}
                                 />
                             </div>
                         )

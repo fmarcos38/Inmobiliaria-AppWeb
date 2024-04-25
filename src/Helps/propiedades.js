@@ -1,13 +1,16 @@
 export const propiedades = [
     {
         id: '1',
+        operacion: 'venta',
         tipo: 'depto',
         hambientes: '3',
         baños: '1',
         sup: 90.00,
         direccion: 'san lorenzo 2020',
         barrio: 'guemes',
-        img:[
+        descripcion_Breve: "2 Ambientes a la calle - Con cochera - ",
+        descripcion_Detalle: "2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - ",
+        imagenes:[
             "https://static.tokkobroker.com/water_pics/10433106557024904359589114338439831515932919706821714076681370660991596683024.jpg",
             "https://static.tokkobroker.com/water_pics/10579583283677420108346448646810473713399183480841229764888790760622851846844.jpg",
             "https://static.tokkobroker.com/water_pics/57725241176385282859769018435241348732192080731756148716126961748951572814081.jpg",
@@ -17,13 +20,16 @@ export const propiedades = [
     },
     {
         id: '2',
+        operacion: 'venta',
         tipo: 'depto',
         hambientes: '3',
         baños: '1',
         sup: 90.00,
         direccion: 'san lorenzo 2020',
         barrio: 'guemes',
-        img:[
+        descripcion_Breve: "2 Ambientes a la calle - Con cochera - ",
+        descripcion_Detalle: "2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - ",
+        imagenes:[
             "https://static.tokkobroker.com/water_pics/10433106557024904359589114338439831515932919706821714076681370660991596683024.jpg",
             "https://static.tokkobroker.com/water_pics/10579583283677420108346448646810473713399183480841229764888790760622851846844.jpg",
             "https://static.tokkobroker.com/water_pics/57725241176385282859769018435241348732192080731756148716126961748951572814081.jpg",
@@ -33,13 +39,16 @@ export const propiedades = [
     },
     {
         id: '3',
+        operacion: 'alquiler',
         tipo: 'depto',
         hambientes: '3',
         baños: '1',
         sup: 90.00,
         direccion: 'san lorenzo 2020',
         barrio: 'guemes',
-        img:[
+        descripcion_Breve: "2 Ambientes a la calle - Con cochera - ",
+        descripcion_Detalle: "2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - ",
+        imagenes:[
             "https://static.tokkobroker.com/water_pics/10433106557024904359589114338439831515932919706821714076681370660991596683024.jpg",
             "https://static.tokkobroker.com/water_pics/10579583283677420108346448646810473713399183480841229764888790760622851846844.jpg",
             "https://static.tokkobroker.com/water_pics/57725241176385282859769018435241348732192080731756148716126961748951572814081.jpg",
@@ -49,13 +58,16 @@ export const propiedades = [
     },
     {
         id: '4',
+        operacion: 'alquiler',
         tipo: 'depto',
         hambientes: '3',
         baños: '1',
         sup: 90.00,
         direccion: 'san lorenzo 2020',
         barrio: 'guemes',
-        img:[
+        descripcion_Breve: "2 Ambientes a la calle - Con cochera - ",
+        descripcion_Detalle: "2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - ",
+        imagenes:[
             "https://static.tokkobroker.com/water_pics/10433106557024904359589114338439831515932919706821714076681370660991596683024.jpg",
             "https://static.tokkobroker.com/water_pics/10579583283677420108346448646810473713399183480841229764888790760622851846844.jpg",
             "https://static.tokkobroker.com/water_pics/57725241176385282859769018435241348732192080731756148716126961748951572814081.jpg",
@@ -65,13 +77,16 @@ export const propiedades = [
     },
     {
         id: '5',
+        operacion: 'venta',
         tipo: 'depto',
         hambientes: '3',
         baños: '1',
         sup: 90.00,
         direccion: 'san lorenzo 2020',
         barrio: 'guemes',
-        img:[
+        descripcion_Breve: "2 Ambientes a la calle - Con cochera - ",
+        descripcion_Detalle: "2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - ",
+        imagenes:[
             "https://static.tokkobroker.com/water_pics/10433106557024904359589114338439831515932919706821714076681370660991596683024.jpg",
             "https://static.tokkobroker.com/water_pics/10579583283677420108346448646810473713399183480841229764888790760622851846844.jpg",
             "https://static.tokkobroker.com/water_pics/57725241176385282859769018435241348732192080731756148716126961748951572814081.jpg",
@@ -81,13 +96,16 @@ export const propiedades = [
     },
     {
         id: '6',
+        operacion: 'venta',
         tipo: 'depto',
         hambientes: '3',
         baños: '1',
         sup: 90.00,
         direccion: 'san lorenzo 2020',
         barrio: 'guemes',
-        img:[
+        descripcion_Breve: "2 Ambientes a la calle - Con cochera - ",
+        descripcion_Detalle: "2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - 2 Ambientes a la calle - Con cochera - ",
+        imagenes:[
             "https://static.tokkobroker.com/water_pics/10433106557024904359589114338439831515932919706821714076681370660991596683024.jpg",
             "https://static.tokkobroker.com/water_pics/10579583283677420108346448646810473713399183480841229764888790760622851846844.jpg",
             "https://static.tokkobroker.com/water_pics/57725241176385282859769018435241348732192080731756148716126961748951572814081.jpg",

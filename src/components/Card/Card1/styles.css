@@ -1,12 +1,87 @@
-.contCard{
+.contCard {
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 50px 250px 90px 130px;
+    grid-template-areas: "title" "image" "text" "stats";
+    background: white;
+    /* box-shadow:  2px 5px rgba(0, 0, 0, 0.9); */
+    font-family: roboto;
+    text-align: center;
+}
+/* espacio titulo */
+.card-title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(243, 247, 244);
+    background-color: rgb(19, 19, 19);;
+    
+}
+/* manejo espacio img */
+.card-image {
+    grid-area: image;
+}
+.card-img{
+    width: 100%;
+    height: 250px;
+}
+
+/* manejo de onfo 1 */
+.card-text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: blue;
+    background-color: rgb(255, 255, 255);
+}
+.card-text .cont-info1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 3px 0 3px 3px;
+}
+.card-text .cont-info1 .direcc {
+    margin: 0;
+}
+.card-text .cont-info1 span {
+    color: grey;
+}
+.card-text .descrip{
+    margin: 0 0 0 10px;
+}
+
+/* manejo es pacion inferior */
+.card-stats {
+    grid-area: stats;
+    background-color: rgb(187, 193, 193);
+}
+.card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card-stats .div-sup {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 450px;
-    background-color: blueviolet;
 }
+.card-stats .div-sup p {
+    margin: 3px;
+}
+.card-stats .div-amb {
+    background-color: azure;
+}
+.card-stats .div-dor {
+    background-color: aqua;
+}
+.card-stats .div-bañ {
+    background-color: antiquewhite;
+}
+
+
 
 @media screen and (max-width: 700px) {
     .contCard{        

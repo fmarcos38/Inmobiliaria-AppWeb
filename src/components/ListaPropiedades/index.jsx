@@ -16,23 +16,21 @@ function ListaPropiedades() {
                 props[0] ?
                     props.map(p => {
                         return (
-                            <div>
-                                <Card1
-                                    key={p.id}
-                                    id={p.id}
-                                    operacion={p.operacion}
-                                    tipo={p.tipo}
-                                    ambientes={p.ambientes}
-                                    dormitorios={p.dormitorios}
-                                    baños={p.baños}
-                                    sup={p.sup}
-                                    direccion={p.direccion}
-                                    barrio={p.barrio}
-                                    imagenes={p.imagenes}
-                                    descripcion_Breve={p.descripcion_Breve}
-                                    precio={p.precio}
-                                />
-                            </div>
+                            <Card1
+                                key={p.id}
+                                id={p.id}
+                                operacion={p.operacion}
+                                tipo={p.tipo}
+                                ambientes={p.ambientes}
+                                dormitorios={p.dormitorios}
+                                baños={p.baños}
+                                sup={p.sup}
+                                direccion={p.direccion}
+                                barrio={p.barrio}
+                                imagenes={p.imagenes}
+                                descripcion_Breve={p.descripcion_Breve}
+                                precio={p.precio}
+                            />
                         )
                     }) : (
                         <p>Cargando props ...</p>

@@ -1,6 +1,6 @@
 .contCard {
     display: grid;
-    grid-template-columns: 400px;
+    grid-template-columns: 350px;
     grid-template-rows: 50px 250px 90px 80px;
     grid-template-areas: "title" "image" "info1" "info2";
     background: white;
@@ -76,10 +76,16 @@
     margin: 3px;
 }
 
-
+/* @media screen and (max-width: 1060px) {
+    .contCard {
+        grid-template-columns: 350px;
+    }
+} */
 @media screen and (max-width: 700px) {
-    .contCard{        
-        width: 300px;
+    .contCard {
+        grid-template-columns: auto;
+        /* se adapta al ancho del cont Padre, q es ListaProps --> q a su ves tiene a Home */
+        grid-template-rows: 50px 300px 90px 80px;
     }
     
 }

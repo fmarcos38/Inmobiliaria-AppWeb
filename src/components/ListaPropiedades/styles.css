@@ -1,9 +1,10 @@
-.contListaP{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
-    gap: 10px;
+.contListaP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    justify-items: center;
+    gap: 15px;
+    background-color: aquamarine;
 }
 
 

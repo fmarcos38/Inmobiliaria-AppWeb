@@ -19,6 +19,8 @@ nav {
     width: 80%;
     height: 4.5rem;
 }
+
+/* cont izq */
 .contIzq{
     display: flex;
     justify-content: start;
@@ -111,59 +113,56 @@ a {
 }
 
 @media screen and (max-width: 1024px){    
-    .contIzq{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        width: 45vw;
-        height: 4rem;
-    }
-    .contDer{
-        display: flex;
-        justify-content: end;
-        align-items: center; 
-        width: 45vw;
-        height: 4rem;
-    }
+    
     li {
         list-style: none;
         margin-right: 0.5rem;
         font-size: medium;
     }
-    a {
-        text-decoration: none;
-    }    
-    .menu-icon {
-        display: none;
-    }
+    
 }
 
-@media screen and (max-width: 772px) {
-    nav {
-        width: 100vw;
-        margin-bottom: 8px;
-    }
+@media screen and (max-width: 975px) {
+    
     .conteiner-navbar{        
-        width: 90vw;
-        height: 4rem;        
+        width: 95%;       
+    }
+    .logo{
+        font-size: large;
     }
     .contIzq{
+        width: 60%;
         font-size: small;
-        margin-left: 2.5rem;
     }
     .contDer{
         font-size: small;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 825px) {
+    
+    .conteiner-navbar{        
+        width: 95%;       
+    }
+    .logo{
+        font-size: large;
+    }
+    .contIzq{
+        font-size: large;
+    }
+    .contDer{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 750px) {
     nav {
-        width: 100vw;
+        width: 100%;
         margin-bottom: 8px;
         height: 3.5rem;
     }
     .conteiner-navbar{        
-        width: 90vw;
+        width: 90%;
         height: 3.5rem; 
         display: flex;
         justify-content: space-around;       

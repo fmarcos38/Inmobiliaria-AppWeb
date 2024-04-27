@@ -12,10 +12,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
 }
 /* estilos col 1 */
-.col1-landing, .col2-landing /*, .col3-landing */{
+.col1-landing, .col2-landing {
     width: 50%;
     height: 500px;
     display: flex;
@@ -25,7 +24,7 @@
 }
 /* estilos prop 1 */
 .contProp-col1, .contProp-col2{
-    width: 80%;
+    width: 95%;
     height: 370px;
     display: flex;
     flex-direction: column;
@@ -47,7 +46,7 @@
 
 /* estilos texto - col 1*/
 .contTexto-col1 , .contTexto-col2{
-    width: 80%;
+    width: 95%;
     height: 130px;
     display: flex;
     flex-direction: column;

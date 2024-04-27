@@ -36,7 +36,7 @@ footer ul li {
     position: relative;
     width: 35%;
 }
-footer ul li h4 {
+footer ul li h2 {
     display: block;
     margin-bottom: 3px;
     border-bottom: 1px solid #ccc;
@@ -55,8 +55,7 @@ footer ul li h4 p {
 footer ul li p {
     display: block;
     color: #e3e8ea;
-    font-size: .833vw;
-    line-height: .9vw;
+    font-size: small;
 }
 .divLinks{
     display: flex;
@@ -77,9 +76,11 @@ footer ul li p {
 }
 footer span {
     width: 90%;
-    font-size: small;
-    margin-bottom: 3px;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
 
 @media screen and (max-width: 600px) {
     .divF{

@@ -1,0 +1,77 @@
+.contGralLanding{ /* el padre de este cont es el de HOME */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+    margin: 0 0 70px 0;
+    background-color: rgb(35, 97, 152);
+}
+.cont-Co1-Col2{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+/* estilos col 1 */
+.col1-landing, .col2-landing /*, .col3-landing */{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* estilos prop 1 */
+.contProp-col1, .contProp-col2{
+    width: 80%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    background-color: #fff;
+}
+.imgProp{
+    width: 85%;
+    height: 250px;
+    margin-top: 10px;
+    border-radius: 5%;
+}
+.infoProp1{
+    margin: 0;
+}
+
+/* estilos texto - col 1*/
+.contTexto-col1 , .contTexto-col2{
+    width: 80%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;    
+    background-color: #fff;
+}
+.infoProp2{
+    margin: 0;
+}
+
+/* estilos col 2 */
+.contTexto-col2{
+    margin-bottom: 10px;
+}
+
+/* estilos col 3 */
+.col3-landing{
+    width: 40%;
+}
+.contTexto1-col3, .contTexto2-col3{
+    width: 80%;
+    height: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}

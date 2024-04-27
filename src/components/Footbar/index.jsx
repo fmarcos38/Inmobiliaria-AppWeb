@@ -17,9 +17,9 @@ function Footbar() {
                     </a>
                     <ul>
                         <li>
-                            <h4>
+                            <h2>
                                 <p>CONTACTANOS</p>
-                            </h4>
+                            </h2>
                             <p>
                                 Belgrano 2214 - Mar del Plata
                                 <br></br>
@@ -33,9 +33,9 @@ function Footbar() {
                         </li>
 
                         <li>
-                            <h4>
+                            <h2>
                                 <p>Links</p>
-                            </h4>
+                            </h2>
                             <div className='divLinks'>
                                 <Link>Ventas</Link>
                                 <Link>Alquileres</Link>
@@ -44,7 +44,7 @@ function Footbar() {
                         </li>
 
                         <li>
-                            <h4><p>Seguinos</p></h4>
+                            <h2><p>Seguinos</p></h2>
                             <a href='https://www.instagram.com/florm.bienesraices/'>
                                 <InstagramIcon className='iconosRedes' />
                             </a>
@@ -82,7 +82,7 @@ export default Footbar;
                 
                 <div className="col2">
                     <div className='tituloCategFoot'>
-                        <h3>CONTACTANOS</h3>
+                        <h2>CONTACTANOS</h2>
                         <div className="line"></div>
                     </div>
                     
@@ -94,7 +94,7 @@ export default Footbar;
 
                 <div className="col2">
                     <div className='tituloCategFoot'>
-                        <h3>LINKS</h3>
+                        <h2>LINKS</h2>
                         <div className="line"></div>
                     </div>
                     
@@ -106,7 +106,7 @@ export default Footbar;
                 
                 <div className="column col4">
                     <div className='redesFoot'>
-                        <h3>SEGUINOS EN</h3>
+                        <h2>SEGUINOS EN</h2>
                         <a href='https://www.instagram.com/florm.bienesraices/'>
                             <InstagramIcon className='iconosRedes' />
                         </a>

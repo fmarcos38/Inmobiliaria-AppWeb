@@ -64,9 +64,11 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <h2 className='texto-inferior'>Somos sinónimode confianza</h2>
+                <h2 className='texto-inferior'>Somos sinónimo de confianza</h2>
             </div>
 
+            {/* landin pantalla chica */}
+            
             {/* lista props destacadas */}
             <div>
                 <ListaPropiedades />

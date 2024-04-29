@@ -1,6 +1,6 @@
 .contGralLanding-imagen{
     width: 100%;
-    height: 700px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -106,7 +106,7 @@
 }
 .contTexto1-col3{
     width: 80%;
-    height: 100%;
+    height: auto;
     margin-bottom: 10px;
     border-radius: 10%;
     background-color: #fffffff1;
@@ -119,8 +119,10 @@
     border-radius: 50%;
 }
 .sub-cont-info-col3{
+    display: flexbox;
+    justify-content: center;
+    align-items: start;
     width: 90%;
-    height: 90%;
     margin: 20px 0 0 20px;
 }
 .texto-col3-comprar{
@@ -153,6 +155,7 @@
 }
 .explorarProps{
     margin-right: 10px;
+    margin-bottom: 5px;
     padding: 8px 10px;
     border-radius: 40px;
     font-size: 1.3rem;
@@ -172,4 +175,129 @@
 /* texto inferior  */
 .texto-inferior{
     color: #fff;
+}
+
+/* responsive */
+@media screen and (max-width: 1375px) /* and (min-width: 999px) */{
+    /* cont col 1 */
+    .cont-Co1-Col2{
+        width: 70%;
+
+    }
+    /* cont col 2 */    
+    .contGralLanding-imagen{
+        height: auto;
+    }
+    /* props 3er col */
+    .texto-col3-comprar{
+        font-size: 1.5rem;
+    }
+    .texto-col3-texto{
+        font-size: 15px;
+        margin: 0 0 10px 0;
+    }
+    .texto-col3-vender{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .texto-col3-nuestroClientes{
+        font-size: 1rem;
+        margin: 0 0 5px 0;
+    }
+    .cont-texto-btn{
+        margin-top: 50px;
+    }
+    .explorarProps{
+        margin-right: 10px;
+        margin-bottom: 5px;
+        padding: 8px 10px;
+        border-radius: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .contLanding{
+        width: 90%;
+        height: 450px;
+    }
+    /* cont col 1 */
+    .cont-Co1-Col2 {
+        width: 75%;
+    }
+    .contProp-col1, .contProp-col2{
+        width: 95%;
+        height: 300px;
+    }
+    /* cont col 2 */
+    .contGralLanding-imagen {
+        height: auto;
+    }
+    .col1-landing, .col2-landing {
+        width: 50%;
+        height: 450px;
+    }
+    .imgProp {
+        width: 85%;
+        height: 150px;
+    }
+    /* col 3 */
+    .col3-landing{
+        width: 40%;
+        height: 450px;
+    }
+    .contTexto1-col3{
+        width: 100%;
+        height: auto;
+    }
+    .imgCasaDpto{
+        width: 50px;
+        border-radius: 50%;
+    }
+    .sub-cont-info-col3{
+        display: flexbox;
+        justify-content: center;
+        align-items: start;
+        width: 90%;
+    }
+    .texto-col3-comprar{
+        font-size: 1rem;
+        margin: 0 0 5px 0;
+    }
+    .texto-col3-texto{
+        font-size: 1rem;
+        margin: 0 0 10px 0;
+    }
+    .texto-col3-vender{
+        font-size: 1rem;
+        margin: 0;
+    }
+    .texto-col3-nuestroClientes{
+        font-size: 1rem;
+        margin: 0 0 5px 0;
+    }
+    .cont-texto-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .explorarProps{
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 8px 10px;
+        border-radius: 40px;
+        font-size: 0.8rem;
+        background-color: aquamarine;
+    }
+    .btn-propiedades {
+        background-color: #fff;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .iconoPlay{
+        width: 30px;
+    }
 }

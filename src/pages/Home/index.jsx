@@ -6,7 +6,10 @@ import ListaPropiedades from '../../components/ListaPropiedades';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import imgCasaDpto from '../../Imagenes/logoCasaDepto.jpg';
 import imgIconoPlay from '../../Imagenes/iconoPlay.jpg'; 
-
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import CallIcon from '@mui/icons-material/Call';
 
 function Home() {
 
@@ -26,8 +29,6 @@ function Home() {
                                 <p className='infoProp1-texto2'><LocationOnIcon /> Zona {prop1.barrio}.</p>
                                 <p className='infoProp1-precio'><b>USD{prop1.precio}</b></p>
                             </div>
-
-
                         </div>
 
                         {/* col 2 */}
@@ -68,7 +69,33 @@ function Home() {
             </div>
 
             {/* landin pantalla chica */}
-            
+            <div className='home-pantChica'>
+                {/* filtros */}
+                <p>Acá van los filtros</p>
+                <div className='cont-info'>
+                    <HomeWorkIcon style={{'font-size': '35px'}}/>
+                    <p className='texto-col3-comprar'><b>Queres comprar !!</b></p>
+                    <p className='texto-col3-texto'>Tenemos la propirdad que estás buscando.</p>
+                    <AttachMoneyIcon style={{'font-size': '35px'}}/>
+                    <p className='texto-col3-vender'><b>Queres vender !!</b></p>
+                    <p className='texto-col3-texto'>Realizamos tazaciones, acesoramiento.</p>
+                    <InsertEmoticonIcon style={{'font-size': '35px'}}/>
+                    <p className='texto-col3-nuestroClientes'><b>Nuestros clientes nos avalan</b></p>
+                    <Link to={'/formularioContacto'} className='linkContacto'>
+                        <p className='texto-col3-texto-link'>Click aquí si queres ponerte en contacto</p>
+                        <CallIcon/>
+                    </Link>
+                    <p className='p-prop-dest'>Propiedades Destacadas</p>
+                    {/* flecha */}
+                    <div className="arrow-container">
+                        <div className="arrow-shine"></div>
+                        <div className="arrow">
+                            <div className="arrow-inner"></div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
             {/* lista props destacadas */}
             <div>
                 <ListaPropiedades />

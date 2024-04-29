@@ -1,6 +1,6 @@
 .contGralLanding-imagen{
     width: 100%;
-    min-height: 700px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -177,6 +177,79 @@
     color: #fff;
 }
 
+/* propiedades Home Pantalla Chica */
+.home-pantChica {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+/* estilos flecha */
+.arrow-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: moveDown 1s infinite alternate;
+}
+
+.arrow {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #c4d499;
+}
+
+.arrow-inner {
+    position: absolute;
+    top: 4px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #6bee46;
+}
+
+.arrow-shine {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(115, 98, 241, 0.8) 0%, rgba(188, 6, 6, 0) 50%);
+    animation: shine 1s infinite;
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
 /* responsive */
 @media screen and (max-width: 1375px) /* and (min-width: 999px) */{
     /* cont col 1 */
@@ -217,9 +290,12 @@
 }
 
 @media screen and (max-width: 950px) {
+    .contGralLanding-imagen{
+        min-height: 600px;
+    }
     .contLanding{
         width: 90%;
-        height: 450px;
+        height: auto;
     }
     /* cont col 1 */
     .cont-Co1-Col2 {
@@ -299,5 +375,27 @@
     }
     .iconoPlay{
         width: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contGralLanding-imagen{
+        display: none;
+    }
+    .cont-info{
+        width: 90%;
+        height: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #beb9b9;
+    }
+    .linkContacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

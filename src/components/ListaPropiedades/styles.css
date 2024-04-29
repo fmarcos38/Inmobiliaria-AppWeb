@@ -26,7 +26,17 @@
     margin-bottom: 10px;
 }
 
-
+/* responsive */
+@media screen and (max-width: 1300px) {
+    .titulo-listaProps-destacadas {
+        bottom: -165px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .titulo-listaProps-destacadas {
+        bottom: -125px;
+    }
+}
 @media screen and (max-width: 700px) {
     .contListaP{
         display: flex;
@@ -36,4 +46,9 @@
         width: 100%;
     }
     
+}
+@media screen and (max-width: 600px) {
+    .titulo-listaProps-destacadas {
+        display: none;
+    }
 }

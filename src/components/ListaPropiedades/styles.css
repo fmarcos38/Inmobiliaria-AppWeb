@@ -1,10 +1,29 @@
+.contPropiedadesDestacadas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(204, 238, 214);
+}
+.titulo-listaProps-destacadas {
+    width: 400px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-self: center;
+    bottom: -115px;
+    padding: 8px 10px;
+    border-radius: 20px;
+    background-color: rgba(239, 244, 242, 0.999);
+}
 .contListaP {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     gap: 15px;
-    background-color: beige;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 

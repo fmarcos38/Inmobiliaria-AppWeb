@@ -6,11 +6,11 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 4.5rem;
+    height: 4rem;
     margin-bottom: 10px;
     border-bottom: 1px solid #b1b5b5;
     box-shadow: 0 0 10px #9a9d9d;
-    background-color: rgba(132, 214, 157, 0.644);
+    background-color: rgb(180, 243, 199);
 }
 .conteiner-navbar{
     display: flex;

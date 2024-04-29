@@ -1,8 +1,6 @@
 import React from 'react'
 import { propiedades } from '../../Helps/propiedades.js';
-import Card1 from '../Card/Card1';
-/* import Card2 from '../Card/Card2';
-import Card3 from '../Card/Card3'; */
+import Card from '../Card';
 import './styles.css';
 
 function ListaPropiedades() {
@@ -10,32 +8,34 @@ function ListaPropiedades() {
     const props = propiedades;
 
     return (
-        <div className='contListaP'>
-            {/* tipo de Card1 */}
-            {
-                props[0] ?
-                    props.map(p => {
-                        return (
-                            <Card1
-                                key={p.id}
-                                id={p.id}
-                                operacion={p.operacion}
-                                tipo={p.tipo}
-                                ambientes={p.ambientes}
-                                dormitorios={p.dormitorios}
-                                baños={p.baños}
-                                sup={p.sup}
-                                direccion={p.direccion}
-                                barrio={p.barrio}
-                                imagenes={p.imagenes}
-                                descripcion_Breve={p.descripcion_Breve}
-                                precio={p.precio}
-                            />
+        <div className='contPropiedadesDestacadas'>
+            <h2 className='titulo-listaProps-destacadas'>Propiedades destacadas</h2>
+            <div className='contListaP'>
+                {
+                    props[0] ?
+                        props.map(p => {
+                            return (
+                                <Card
+                                    key={p.id}
+                                    id={p.id}
+                                    operacion={p.operacion}
+                                    tipo={p.tipo}
+                                    ambientes={p.ambientes}
+                                    dormitorios={p.dormitorios}
+                                    baños={p.baños}
+                                    sup={p.sup}
+                                    direccion={p.direccion}
+                                    barrio={p.barrio}
+                                    imagenes={p.imagenes}
+                                    descripcion_Breve={p.descripcion_Breve}
+                                    precio={p.precio}
+                                />
+                            )
+                        }) : (
+                            <p>Cargando props ...</p>
                         )
-                    }) : (
-                        <p>Cargando props ...</p>
-                    )
-            }
+                }
+            </div>
         </div>
     )
 }

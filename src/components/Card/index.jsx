@@ -1,12 +1,12 @@
 import React from 'react'
 import './styles.css'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import iconoSup from '../../../Imagenes/icono-superficie.svg';
-import iconoAmb from '../../../Imagenes/icono-ambientes.svg';
-import iconoDor from '../../../Imagenes/icono-dormitorios.svg';
-import iconoBañ from '../../../Imagenes/icono-banos.svg';
+import iconoSup from '../../Imagenes/icono-superficie.svg';
+import iconoAmb from '../../Imagenes/icono-ambientes.svg';
+import iconoDor from '../../Imagenes/icono-dormitorios.svg';
+import iconoBañ from '../../Imagenes/icono-banos.svg';
 
-function Card1({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direccion, barrio, imagenes, descripcion_Breve, precio }) {
+function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direccion, barrio, imagenes, descripcion_Breve, precio }) {
 
     return (
         <div className='contCard'>
@@ -71,4 +71,4 @@ function Card1({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direc
     )
 }
 
-export default Card1;
+export default Card;

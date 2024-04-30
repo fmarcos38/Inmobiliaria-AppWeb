@@ -11,6 +11,7 @@ nav {
     border-bottom: 1px solid #b1b5b5;
     box-shadow: 0 0 10px #9a9d9d;
     background-color: rgb(180, 243, 199);
+    z-index: 2; /* para que qde sobre cualq component */
 }
 .conteiner-navbar{
     display: flex;

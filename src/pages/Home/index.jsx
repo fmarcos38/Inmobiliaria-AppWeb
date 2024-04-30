@@ -10,6 +10,7 @@ import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import CallIcon from '@mui/icons-material/Call';
+import Filtros from '../../components/Filtros';
 
 function Home() {
 
@@ -98,7 +99,7 @@ function Home() {
             </div>
 
             {/* filtros */}
-            <p>Acá van los filtros</p>
+            <Filtros/>
 
             {/* lista props destacadas */}
             <div>

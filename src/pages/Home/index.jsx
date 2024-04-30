@@ -68,10 +68,11 @@ function Home() {
                 <h2 className='texto-inferior'>Somos sinónimo de confianza</h2>
             </div>
 
-            {/* landin pantalla chica */}
+            {/* Home pantalla chica */}
             <div className='home-pantChica'>
                 {/* filtros */}
-                <p>Acá van los filtros</p>
+                {/* <p>Acá van los filtros</p> */}
+
                 <div className='cont-info'>
                     <HomeWorkIcon style={{'font-size': '35px'}}/>
                     <p className='texto-col3-comprar'><b>Queres comprar !!</b></p>
@@ -93,8 +94,11 @@ function Home() {
                             <div className="arrow-inner"></div>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
+
+            {/* filtros */}
+            <p>Acá van los filtros</p>
 
             {/* lista props destacadas */}
             <div>

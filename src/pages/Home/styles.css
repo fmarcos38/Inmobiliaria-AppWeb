@@ -185,29 +185,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 48px;
+    background-color: rgb(48, 44, 44);
 }
 
 /* estilos flecha */
 .arrow-container {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     animation: moveDown 1s infinite alternate;
 }
-
 .arrow {
     position: absolute;
-    top: 30%;
+    top: -10%;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 25px solid #c4d499;
+    border-top: 25px solid rgb(50, 218, 50);
 }
-
 .arrow-inner {
     position: absolute;
     top: 4px;
@@ -216,19 +215,17 @@
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 25px solid #6bee46;
+    border-top: 25px solid rgb(211, 45, 45);
 }
-
 .arrow-shine {
     position: absolute;
-    top: -10px;
+    top: -30px;
     left: -10px;
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle, rgba(115, 98, 241, 0.8) 0%, rgba(188, 6, 6, 0) 50%);
+    width: 100px;
+    height: 100px;
+    /* background: radial-gradient(circle, rgba(115, 98, 241, 0.8) 0%, rgba(188, 6, 6, 0) 50%); */
     animation: shine 1s infinite;
 }
-
 @keyframes moveDown {
     0% {
         transform: translateY(0);
@@ -238,7 +235,6 @@
         transform: translateY(10px);
     }
 }
-
 @keyframes shine {
     0% {
         transform: rotateZ(0);
@@ -288,7 +284,6 @@
         font-size: 1rem;
     }
 }
-
 @media screen and (max-width: 950px) {
     .contGralLanding-imagen{
         min-height: 600px;
@@ -377,25 +372,48 @@
         width: 30px;
     }
 }
-
+@media screen and (min-width: 600px){
+    .home-pantChica{
+        display: none;
+    }
+}
 @media screen and (max-width: 600px) {
+    .cont-home{
+        width: 100%;
+    }
     .contGralLanding-imagen{
         display: none;
     }
     .cont-info{
-        width: 90%;
-        height: 430px;
+        width: 80%;
+        height: 380px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
         border-radius: 20px;
-        background-color: #beb9b9;
+        color: rgba(129, 239, 202, 0.952);
+        background: rgb(128, 76, 160);
+        background: radial-gradient(circle, rgba(150, 87, 189, 0.945) 43%, rgba(175,126,191,1) 85%);
     }
     .linkContacto{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0;
+    }
+    .texto-col3-nuestroClientes, .texto-col3-texto-link{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    .contGralLanding-imagen{
+        display: none;
+    }
+    .cont-info{
+        width: 85%;
     }
 }

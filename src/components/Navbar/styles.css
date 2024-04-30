@@ -158,12 +158,13 @@ a {
 @media screen and (max-width: 750px) {
     nav {
         width: 100%;
-        margin-bottom: 8px;
-        height: 3.5rem;
+        height: 3rem;
+        background: rgb(112, 233, 153);
+        background: radial-gradient(circle, rgba(115, 233, 154, 0.945) 11%, rgb(207, 160, 223) 100%);
     }
     .conteiner-navbar{        
         width: 90%;
-        height: 3.5rem; 
+        height: 3rem; 
         display: flex;
         justify-content: space-around;       
     }

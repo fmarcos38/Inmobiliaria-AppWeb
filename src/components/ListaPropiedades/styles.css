@@ -33,6 +33,9 @@
     }
 }
 @media screen and (max-width: 950px) {
+    .contListaP{
+        width: 90%;
+    }
     .titulo-listaProps-destacadas {
         bottom: -125px;
     }
@@ -48,6 +51,9 @@
     
 }
 @media screen and (max-width: 600px) {
+    .contPropiedadesDestacadas{
+        background-color: #fff;
+    }
     .titulo-listaProps-destacadas {
         display: none;
     }

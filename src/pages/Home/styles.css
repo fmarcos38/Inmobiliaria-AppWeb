@@ -189,62 +189,6 @@
     background-color: rgb(48, 44, 44);
 }
 
-/* estilos flecha */
-.arrow-container {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    animation: moveDown 1s infinite alternate;
-}
-.arrow {
-    position: absolute;
-    top: -10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 25px solid rgb(50, 218, 50);
-}
-.arrow-inner {
-    position: absolute;
-    top: 4px;
-    left: -15px;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 25px solid rgb(211, 45, 45);
-}
-.arrow-shine {
-    position: absolute;
-    top: -30px;
-    left: -10px;
-    width: 100px;
-    height: 100px;
-    /* background: radial-gradient(circle, rgba(115, 98, 241, 0.8) 0%, rgba(188, 6, 6, 0) 50%); */
-    animation: shine 1s infinite;
-}
-@keyframes moveDown {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(10px);
-    }
-}
-@keyframes shine {
-    0% {
-        transform: rotateZ(0);
-    }
-
-    100% {
-        transform: rotateZ(360deg);
-    }
-}
-
 
 /* responsive */
 @media screen and (max-width: 1375px) /* and (min-width: 999px) */{

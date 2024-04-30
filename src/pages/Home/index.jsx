@@ -86,15 +86,7 @@ function Home() {
                     <Link to={'/formularioContacto'} className='linkContacto'>
                         <p className='texto-col3-texto-link'>Click aquí si queres ponerte en contacto</p>
                         <CallIcon/>
-                    </Link>
-                    <p className='p-prop-dest'>Propiedades Destacadas</p>
-                    {/* flecha */}
-                    <div className="arrow-container">
-                        <div className="arrow-shine"></div>
-                        <div className="arrow">
-                            <div className="arrow-inner"></div>
-                        </div>
-                    </div>
+                    </Link>                    
                 </div>
             </div>
 

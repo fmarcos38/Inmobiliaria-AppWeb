@@ -9,7 +9,7 @@ function ListaPropiedades() {
 
     return (
         <div className='contPropiedadesDestacadas'>
-            <h2 className='titulo-listaProps-destacadas'>Propiedades destacadas</h2>
+            <h2 className='titulo-listaProps-destacadas'>Encuentra la propiedad que estás buscando</h2>
             <div className='contListaP'>
                 {
                     props[0] ?

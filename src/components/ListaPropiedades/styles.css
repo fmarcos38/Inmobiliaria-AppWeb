@@ -6,7 +6,7 @@
     background-color: rgb(204, 238, 214);
 }
 .titulo-listaProps-destacadas {
-    width: 400px;
+    width: auto;
     display: flex;
     position: absolute;
     justify-content: center;

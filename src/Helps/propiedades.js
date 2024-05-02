@@ -23,7 +23,7 @@ export const propiedades = [
     {
         id: '2',
         operacion: 'venta',
-        tipo: 'depto',
+        tipo: 'casa',
         ambientes: '3',
         dormitorios: '2',
         baños: '1',

@@ -50,6 +50,7 @@ button{
     cursor: pointer;
     position: relative;
     padding: 0px;
+    border-radius: 10px;
     overflow: hidden;
     transition: all .5s;
     margin: 3px;

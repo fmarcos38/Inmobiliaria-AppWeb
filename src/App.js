@@ -5,11 +5,13 @@ import Redes from './components/Redes';
 import Footbar from './components/Footbar';
 import Card from './components/Card';
 import Home from './pages/Home';
+import { InmobiliariaProvider } from './Context';
 
 
 function App() {
   return (
-    <div className="App">      
+    <InmobiliariaProvider>
+      <div className="App">      
       {/*--------- navbar------ */}
       <Navbar/>
       {/* ---barra lateral Redes ssoc. */}
@@ -22,6 +24,7 @@ function App() {
       {/* footer */}
       <Footbar/>
     </div>
+    </InmobiliariaProvider>
   );
 }
 

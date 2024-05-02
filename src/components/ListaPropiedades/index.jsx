@@ -1,11 +1,11 @@
-import React from 'react'
-import { propiedades } from '../../Helps/propiedades.js';
 import Card from '../Card';
 import './styles.css';
+import { useSelector } from 'react-redux';
+
 
 function ListaPropiedades() {
     //me traigo las props falsas
-    const props = propiedades;
+    const props = useSelector(state => state.propiedades); 
 
     return (
         <div className='contPropiedadesDestacadas'>

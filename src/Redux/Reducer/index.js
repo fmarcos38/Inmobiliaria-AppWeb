@@ -1,7 +1,8 @@
-import { FILTRA_PROPS, GET_PROPS } from "../Actions/ActionsType";
+import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, RESET_DETALLE } from "../Actions/ActionsType";
 
 const initialState = {
     propiedades: [],
+    detalleProp: {},
 };
 
 
@@ -18,8 +19,21 @@ export default function rootReducer (state = initialState, action) {
             return{
                 ...state,
                 propiedades: propsFiltradas
-            } 
-        default:
+            }; 
+        case DETALLE_PORP:
+            console.log("idP-Re: ", action.payload);
+            const arrProp = [...state.propiedades]; 
+            let det_prop = arrProp.find(p => p.id === action.payload);            
+            return{
+                ...state,
+                detalleProp: det_prop
+            };
+        case RESET_DETALLE:
+            return{
+                ...state,
+                detalleProp: {}
+            }
+            default:
             return state;
     }
 };

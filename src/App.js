@@ -6,6 +6,7 @@ import Footbar from './components/Footbar';
 import Card from './components/Card';
 import Home from './pages/Home';
 import { InmobiliariaProvider } from './Context';
+import DetalleProp from './pages/DetallePropiedad';
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <Redes className='redes'/>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/detalle/:id' element={<DetalleProp/>}/>
+
         {/* rutas para el desarrollador */}
         <Route path='/card' element={<Card/>}/>
       </Routes>

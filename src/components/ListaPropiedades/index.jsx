@@ -1,11 +1,18 @@
+import { useEffect } from 'react';
 import Card from '../Card';
 import './styles.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProps } from '../../Redux/Actions';
 
 
 function ListaPropiedades() {
     //me traigo las props falsas
     const props = useSelector(state => state.propiedades); 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProps());
+    }, [dispatch]);
 
     return (
         <div className='contPropiedadesDestacadas'>

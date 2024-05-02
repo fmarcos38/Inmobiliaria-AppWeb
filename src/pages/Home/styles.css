@@ -1,6 +1,7 @@
 .contGralLanding-imagen{
+    position: relative;
     width: 100%;
-    height: 700px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -141,12 +142,6 @@
     font-size: 1.5rem;
     margin: 0 0 5px 0;
 }
-.linkContacto{
-    
-}
-.texto-col3-texto-link{
-    
-}
 .cont-texto-btn{
     display: flex;
     justify-content: center;
@@ -171,10 +166,16 @@
 .iconoPlay{
     width: 30px;
 }
-
-/* texto inferior  */
-.texto-inferior{
-    color: #fff;
+.zocalo {
+    width: auto;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-self: center;
+    top: 608px;
+    padding: 8px 10px;
+    border-radius: 20px;
+    background-color: rgba(239, 244, 242, 0.999);
 }
 
 /* propiedades Home Pantalla Chica */
@@ -191,15 +192,13 @@
 
 
 /* responsive */
-@media screen and (max-width: 1375px) /* and (min-width: 999px) */{
+@media screen and (max-width: 1200px) /* and (min-width: 999px) */{
+    .contGralLanding-imagen{
+        
+    }
     /* cont col 1 */
     .cont-Co1-Col2{
         width: 70%;
-
-    }
-    /* cont col 2 */    
-    .contGralLanding-imagen{
-        height: auto;
     }
     /* props 3er col */
     .texto-col3-comprar{
@@ -228,13 +227,16 @@
         font-size: 1rem;
     }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
     .contGralLanding-imagen{
-        min-height: 600px;
+        height: 550px;
+    }
+    .zocalo{
+        top: 510px;
     }
     .contLanding{
         width: 90%;
-        height: auto;
+        margin: 0;
     }
     /* cont col 1 */
     .cont-Co1-Col2 {
@@ -245,9 +247,6 @@
         height: 300px;
     }
     /* cont col 2 */
-    .contGralLanding-imagen {
-        height: auto;
-    }
     .col1-landing, .col2-landing {
         width: 50%;
         height: 450px;

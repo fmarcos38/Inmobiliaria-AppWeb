@@ -66,7 +66,9 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <h2 className='texto-inferior'>Somos sinónimo de confianza</h2>
+                
+                {/* zocalo */}
+                <h2 className='zocalo'>Encuentra la propiedad que estás buscando</h2>
             </div>
 
             {/* Home pantalla chica */}

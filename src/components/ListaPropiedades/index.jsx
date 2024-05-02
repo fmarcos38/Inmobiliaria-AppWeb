@@ -15,8 +15,7 @@ function ListaPropiedades() {
     }, [dispatch]);
 
     return (
-        <div className='contPropiedadesDestacadas'>
-            <h2 className='titulo-listaProps-destacadas'>Encuentra la propiedad que estás buscando</h2>
+        <div className='cont-listaProps'>            
             <div className='contListaP'>
                 {
                     props[0] ?

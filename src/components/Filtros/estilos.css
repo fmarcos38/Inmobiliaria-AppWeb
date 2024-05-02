@@ -163,9 +163,22 @@ button span:nth-child(4){
 
 
 /* responsive */
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1000px){
+    button{
+        width: 80px;
+        height:35px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .btn-props-dest{
+        width: 200px;
+        height:35px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+@media screen and (max-width: 800px){
     .cont-principal-filtros{
-        height: auto;
         background: rgba(112, 233, 152, 0.904);
         background: radial-gradient(circle, rgba(115, 233, 154, 0.893) 11%, rgba(207, 160, 223, 0.915) 100%);
     }
@@ -180,7 +193,7 @@ button span:nth-child(4){
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 35px;
     }
     .check-venta-alq{
         margin: 0;
@@ -197,12 +210,11 @@ button span:nth-child(4){
     button{
         width: 75px;
         height:20px;
-        font-size: 15px;
+        font-size: 18px;
     }
     .btn-props-dest{
         width: 230px;
         height:20px;
         font-size: 15px;
     }
-    
 }

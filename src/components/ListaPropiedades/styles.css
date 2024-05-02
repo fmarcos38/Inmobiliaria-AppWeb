@@ -1,21 +1,11 @@
-.contPropiedadesDestacadas{
+.cont-listaProps{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(204, 238, 214);
 }
-.titulo-listaProps-destacadas {
-    width: auto;
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-self: center;
-    bottom: -115px;
-    padding: 8px 10px;
-    border-radius: 20px;
-    background-color: rgba(239, 244, 242, 0.999);
-}
+
 .contListaP {
     display: flex;
     flex-wrap: wrap;
@@ -27,17 +17,10 @@
 }
 
 /* responsive */
-@media screen and (max-width: 1300px) {
-    .titulo-listaProps-destacadas {
-        bottom: -165px;
-    }
-}
+
 @media screen and (max-width: 950px) {
     .contListaP{
         width: 90%;
-    }
-    .titulo-listaProps-destacadas {
-        bottom: -125px;
     }
 }
 @media screen and (max-width: 700px) {
@@ -53,8 +36,5 @@
 @media screen and (max-width: 600px) {
     .contPropiedadesDestacadas{
         background-color: rgb(48, 44, 44);
-    }
-    .titulo-listaProps-destacadas {
-        display: none;
     }
 }

@@ -12,7 +12,7 @@
     background-image: url('../../Imagenes/Mar-Del-Plata.webp');
     background-size: cover; /* Hace que la imagen de fondo cubra todo el div */
     background-position: center;
-    margin-top: 65px;
+    /* margin-top: 65px; */
 }
 .contLanding{ /* el padre de este cont es el de HOME */
     display: flex;

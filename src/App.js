@@ -7,6 +7,7 @@ import Card from './components/Card';
 import Home from './pages/Home';
 import { InmobiliariaProvider } from './Context';
 import DetalleProp from './pages/DetallePropiedad';
+import Carrusel from './components/Carrusel';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
         {/* rutas para el desarrollador */}
         <Route path='/card' element={<Card/>}/>
+        <Route path='/carrusel' element={<Carrusel/>} />
       </Routes>
       {/* footer */}
       <Footbar/>

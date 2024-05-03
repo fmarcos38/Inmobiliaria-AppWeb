@@ -1,3 +1,6 @@
+.cont-home{
+    width: 100%;
+}
 .contGralLanding-imagen{
     position: relative;
     width: 100%;
@@ -156,15 +159,25 @@
     font-size: 1.3rem;
     background-color: aquamarine;
 }
+.a-explorarProps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .btn-propiedades {
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
     border: none;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 20px;
 }
-.iconoPlay{
+.iconoExplorarProps{
     width: 30px;
+    margin-left: 5px;
 }
 .zocalo {
     width: auto;
@@ -187,15 +200,27 @@
     justify-content: center;
     align-items: center;
     margin-top: 48px;
-    background-color: rgb(48, 44, 44);
+    background-image: url('../../Imagenes/Mar-Del-Plata.webp');
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el div */
+    background-position: center;
 }
-
+.cont-info{
+    width: 80%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: rgba(129, 239, 202, 0.952);
+    background: rgb(128, 76, 160);
+    background: radial-gradient(circle, rgba(150, 87, 189, 0.945) 43%, rgba(175,126,191,1) 85%);
+}
 
 /* responsive */
 @media screen and (max-width: 1200px) /* and (min-width: 999px) */{
-    .contGralLanding-imagen{
-        
-    }
     /* cont col 1 */
     .cont-Co1-Col2{
         width: 70%;
@@ -304,16 +329,6 @@
         font-size: 0.8rem;
         background-color: aquamarine;
     }
-    .btn-propiedades {
-        background-color: #fff;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 50%;
-    }
-    .iconoPlay{
-        width: 30px;
-    }
 }
 @media screen and (min-width: 600px){
     .home-pantChica{
@@ -328,18 +343,8 @@
         display: none;
     }
     .cont-info{
-        width: 80%;
-        height: 380px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        border-radius: 20px;
-        color: rgba(129, 239, 202, 0.952);
-        background: rgb(128, 76, 160);
-        background: radial-gradient(circle, rgba(150, 87, 189, 0.945) 43%, rgba(175,126,191,1) 85%);
+        width: 70%;
+        height: 350px;
     }
     .linkContacto{
         display: flex;
@@ -357,6 +362,28 @@
         display: none;
     }
     .cont-info{
-        width: 85%;
+        width: 80%;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .cont-info{
+        width: 90%;
+        height: auto;
+    }
+    .texto-col3-comprar{
+        font-size: 12px;
+    }
+    .texto-col3-texto{
+        font-size: 12px;
+    }
+    .texto-col3-vender{
+        font-size: 12px;
+    }
+    .texto-col3-nuestroClientes{
+        font-size: 12px;
+    }
+    .texto-col3-texto-link{
+        font-size: 12px;
     }
 }

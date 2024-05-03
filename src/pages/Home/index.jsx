@@ -3,14 +3,15 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import { propiedades } from '../../Helps/propiedades';
 import ListaPropiedades from '../../components/ListaPropiedades';
+/* iconos materiaUI */
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import imgCasaDpto from '../../Imagenes/logoCasaDepto.jpg';
-import imgIconoPlay from '../../Imagenes/iconoPlay.jpg'; 
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import CallIcon from '@mui/icons-material/Call';
 import Filtros from '../../components/Filtros';
+import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
 
 function Home() {
 
@@ -20,6 +21,7 @@ function Home() {
     return (
         <div className='cont-home'>
             <div className='contGralLanding-imagen'>
+                {/* muestra card 1 2 y 3  */}
                 <div className='contLanding'>
                     <div className='cont-Co1-Col2'>
                         {/* col 1 */}
@@ -57,10 +59,12 @@ function Home() {
                                     <p className='texto-col3-texto-link'>No dudes en contactartos</p>
                                 </Link>
                                 <div className='cont-texto-btn'>
-                                    <span className='explorarProps'>Explorar Propiedades</span>
-                                    <button className='btn-propiedades'>
-                                        <img src={imgIconoPlay} className='iconoPlay' alt='' />
-                                    </button>
+                                    <a href='#explorarProps' className='a-explorarProps'>
+                                        <button className='btn-propiedades'>
+                                            Explorar
+                                            <AddHomeWorkIcon className='iconoExplorarProps' />
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -93,12 +97,14 @@ function Home() {
             </div>
 
             {/* filtros */}
-            <Filtros/>
-
-            {/* lista props destacadas */}
-            <div>
-                <ListaPropiedades />
+            <div id='explorarProps'>
+                <Filtros/>
             </div>
+            
+
+            {/* lista props */}
+            <ListaPropiedades />
+            
         </div>
     )
 }

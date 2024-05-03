@@ -13,8 +13,8 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
     const [showDetail, setShowDetail] = useState(false);
 
     return (
-        <div>
-            <NavLink to={`/detalle/${id}`}>
+        <>
+            <NavLink to={`/detalle/${id}`} className='navLink-car'>
                 <div
                     className='contCard'
                     onMouseEnter={() => setShowDetail(true)}
@@ -83,7 +83,7 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
                     </div>
                 </div>
             </NavLink>
-        </div>
+        </>
     )
 }
 

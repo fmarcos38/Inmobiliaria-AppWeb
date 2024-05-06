@@ -4,8 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { detalleProp, resetDetalle } from '../../Redux/Actions';
 import Carrusel from '../../components/Carrusel';
-import GeolocalizacionMDP from '../../components/googleMap';
-//import { propiedades } from '../../Helps/propiedades';
+import MapProp from '../../components/MapaProp';
 
 function DetalleProp(){
 
@@ -87,7 +86,7 @@ function DetalleProp(){
                 </div>
                 {/* google map */}
                 <div className='cont-map'>
-                    <GeolocalizacionMDP/>
+                    <MapProp direccionProp={detalle_prop.direccion}/>
                 </div>
             </div>
         </div>

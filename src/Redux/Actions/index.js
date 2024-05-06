@@ -1,5 +1,5 @@
 import { propiedades } from "../../Helps/propiedades";
-import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, RESET_DETALLE } from "./ActionsType";
+import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, IS_OPEN_MODAL_PICTURE, RESET_DETALLE } from "./ActionsType";
 
 //trae props
 export const getProps = (props = propiedades) => {
@@ -16,7 +16,7 @@ export const filtraTipo = (tipo) => {
 };
 
 //detalle prop
-export function detalleProp(id){
+export const detalleProp = (id) => {
     return function(dispatch){
         dispatch({type: DETALLE_PORP, payload: id});
     }
@@ -26,5 +26,12 @@ export function detalleProp(id){
 export const resetDetalle = () => {
     return function(dispatch) {
         dispatch({ type: RESET_DETALLE });
+    }
+};
+
+//cierra Modal imagen prop
+export const isOpenModalPicture = () => {
+    return function(dispatch){
+        dispatch({type: IS_OPEN_MODAL_PICTURE});
     }
 };

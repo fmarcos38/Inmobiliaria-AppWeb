@@ -1,8 +1,9 @@
-import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, RESET_DETALLE } from "../Actions/ActionsType";
+import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, IS_OPEN_MODAL_PICTURE, RESET_DETALLE } from "../Actions/ActionsType";
 
 const initialState = {
     propiedades: [],
     detalleProp: {},
+    isOpenModalPicture: false,
 };
 
 
@@ -21,7 +22,6 @@ export default function rootReducer (state = initialState, action) {
                 propiedades: propsFiltradas
             }; 
         case DETALLE_PORP:
-            console.log("idP-Re: ", action.payload);
             const arrProp = [...state.propiedades]; 
             let det_prop = arrProp.find(p => p.id === action.payload);            
             return{
@@ -32,8 +32,13 @@ export default function rootReducer (state = initialState, action) {
             return{
                 ...state,
                 detalleProp: {}
-            }
-            default:
+            };
+        case IS_OPEN_MODAL_PICTURE:
+            return{
+                ...state,
+                isOpenModalPicture: !state.isOpenModalPicture,
+            };
+        default:
             return state;
     }
 };

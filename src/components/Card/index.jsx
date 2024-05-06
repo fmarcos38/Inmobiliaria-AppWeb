@@ -30,7 +30,6 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
                     </div>
                     {/* imagen */}
                     <div className='card-image'>
-                        {/* realizar carrusel de imgs */}
                         <img className='card-img' src={imagenes[0]} alt='not found' />
                     </div>
                     {/* info 1 */}

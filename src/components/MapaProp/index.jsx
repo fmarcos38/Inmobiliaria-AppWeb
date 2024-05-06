@@ -15,7 +15,6 @@ const MapProp = ({ direccionProp }) => {
 
     return (
         <div className="map-container">
-            api:{process.env.REACT_APP_API_GOOGLE_MAP}
             <iframe
                 title="Map"
                 className="map"

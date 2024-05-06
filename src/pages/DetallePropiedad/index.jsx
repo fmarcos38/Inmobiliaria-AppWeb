@@ -81,11 +81,16 @@ function DetalleProp(){
                 </div>
 
                 {/* descrip prop */}
-                <div className='descrip'>
-
+                <div className='cont-descrip'>
+                    <p>Descripción Propiedad</p>
+                    <div className='descrip'>
+                        <p>{detalle_prop.descripcion_Detalle}</p>
+                    </div>
                 </div>
+                
                 {/* google map */}
                 <div className='cont-map'>
+                    <p>Ubicacion Propiedad</p>
                     <MapProp direccionProp={detalle_prop.direccion}/>
                 </div>
             </div>

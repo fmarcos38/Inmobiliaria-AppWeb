@@ -20,7 +20,7 @@ function Navbar() {
                 <div className='contIzq'>
                     {/* logo */}
                     <h1>
-                        <NavLink to='/home' >
+                        <NavLink to='/' >
                             {/* <img src={logo} alt='img not found' className='logo' /> */}
                             <p className='logo'>Inmobiliaria <b>Mendive</b></p>
                         </NavLink>

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 //creo el contexto 
 export const InmobiliariaContext = createContext();
@@ -10,6 +10,10 @@ export const InmobiliariaProvider = ({children}) => {
     const [ checkedVenta, setCheckedVenta ] = useState(false);
     //estado para check alq
     const [ checkedAlquiler, setCheckedAlquiler ] = useState(false);
+    
+
+  
+
 
     //funcion actualiza check venta
     const actualizaCheckVenta = () => {
@@ -22,6 +26,9 @@ export const InmobiliariaProvider = ({children}) => {
         setCheckedVenta(false);
     };
 
+
+
+
     return (
         <InmobiliariaContext.Provider 
             value={{
@@ -29,6 +36,7 @@ export const InmobiliariaProvider = ({children}) => {
                 actualizaCheckVenta,
                 checkedAlquiler,
                 actualizaCheckAlq,
+                
             }}
         >
             {children}

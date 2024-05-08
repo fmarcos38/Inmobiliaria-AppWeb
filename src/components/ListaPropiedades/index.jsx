@@ -1,8 +1,9 @@
+
 import Card from '../Card';
 import './styles.css';
 
-
 function ListaPropiedades({props}) {
+
 
     return (
         <div className='cont-listaProps'>            

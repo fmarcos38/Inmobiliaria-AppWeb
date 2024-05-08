@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import './estilos.css';
 import { InmobiliariaContext } from '../../Context';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getProps, filtraTipo } from '../../Redux/Actions';
 import { propiedades } from '../../Helps/propiedades';
 
@@ -9,7 +9,7 @@ import { propiedades } from '../../Helps/propiedades';
 function Filtros({check}) {
 
     //me traigo las props falsas
-    const arrPropieda = propiedades; //en un futuro seran de la DB de TOKKO
+    const arrPropieda = useSelector(state => state.proopsfiltradas); //en un futuro seran de la DB de TOKKO
     const context = useContext(InmobiliariaContext);
     const dispatch = useDispatch();
 
@@ -34,6 +34,9 @@ function Filtros({check}) {
                 break;
             case 'casa':
                 dispatch(filtraTipo('casa'));
+                break;
+            case 'todas':
+                dispatch(filtraTipo('todas'));
                 break;
             default:
                 break;
@@ -129,6 +132,16 @@ function Filtros({check}) {
                     <div>
                         <button className='btn-props-dest'>
                             Propiedades destacadas
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                    <div>
+                        <button id='todas' className='btn-props-dest' onClick={(e) => handleClick(e)}>
+                            Todas las Propiedades
                             <span></span>
                             <span></span>
                             <span></span>

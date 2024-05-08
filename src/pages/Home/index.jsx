@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProps } from '../../Redux/Actions';
+import { Link } from 'react-router-dom';
 import { propiedades } from '../../Helps/propiedades';
 import ListaPropiedades from '../../components/ListaPropiedades';
 import './styles.css';
@@ -18,7 +19,7 @@ import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
 function Home() {
 
     const prop1 = propiedades[0];
-    const props = useSelector(state => state.propiedades);
+    const props = useSelector(state => state.propsFiltradas); 
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -104,9 +105,11 @@ function Home() {
             <div id='explorarProps'>
                 <Filtros/>
             </div>
+            
 
             {/* lista props */}
-            <ListaPropiedades  props={props}/>
+            <ListaPropiedades props={props}/>
+
         </div>
     )
 }

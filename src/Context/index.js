@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, } from "react";
 
 //creo el contexto 
 export const InmobiliariaContext = createContext();
@@ -10,10 +10,6 @@ export const InmobiliariaProvider = ({children}) => {
     const [ checkedVenta, setCheckedVenta ] = useState(false);
     //estado para check alq
     const [ checkedAlquiler, setCheckedAlquiler ] = useState(false);
-    
-
-  
-
 
     //funcion actualiza check venta
     const actualizaCheckVenta = () => {
@@ -25,8 +21,6 @@ export const InmobiliariaProvider = ({children}) => {
         setCheckedAlquiler(!checkedAlquiler);
         setCheckedVenta(false);
     };
-
-
 
 
     return (

@@ -27,7 +27,7 @@ function Home() {
                         {/* col 1 */}
                         <div className='col1-landing'>
                             <div className='contProp-col1'>
-                                <img src={prop1.imagenes[0]} className='imgProp' alt='not found' />
+                                <img src={prop1.imagenes[0]} className='imgPropHome' alt='not found' />
                                 <p className='infoProp1-texto1'>Excelente {prop1.tipo} de {prop1.ambientes} ambientes.</p>
                                 <p className='infoProp1-texto2'><LocationOnIcon /> Zona {prop1.barrio}.</p>
                                 <p className='infoProp1-precio'><b>USD{prop1.precio}</b></p>
@@ -37,7 +37,7 @@ function Home() {
                         {/* col 2 */}
                         <div className='col2-landing'>
                             <div className='contProp-col2'>
-                                <img src={prop1.imagenes[0]} className='imgProp' alt='not found' />
+                                <img src={prop1.imagenes[0]} className='imgPropHome' alt='not found' />
                                 <p className='infoProp1-texto1'>Excelente {prop1.tipo} de {prop1.ambientes} ambientes.</p>
                                 <p className='infoProp1-texto2'><LocationOnIcon /> Zona {prop1.barrio}.</p>
                                 <p className='infoProp1-precio'><b>USD{prop1.precio}</b></p>
@@ -77,9 +77,6 @@ function Home() {
 
             {/* Home pantalla chica */}
             <div className='home-pantChica'>
-                {/* filtros */}
-                {/* <p>Acá van los filtros</p> */}
-
                 <div className='cont-info'>
                     <HomeWorkIcon style={{'font-size': '35px'}}/>
                     <p className='texto-col3-comprar'><b>Queres comprar !!</b></p>
@@ -100,11 +97,9 @@ function Home() {
             <div id='explorarProps'>
                 <Filtros/>
             </div>
-            
 
             {/* lista props */}
             <ListaPropiedades />
-            
         </div>
     )
 }

@@ -1,6 +1,4 @@
-.cont-home{
-    width: 100%;
-}
+
 .contGralLanding-imagen{
     position: relative;
     width: 100%;
@@ -49,9 +47,9 @@
     border-radius: 10%;
     background-color: #fffffff1;
 }
-.imgProp{
+.imgPropHome{
     width: 85%;
-    height: 250px;
+    height: 230px;
     margin-top: 20px;
     border-radius: 5%;
 }
@@ -90,7 +88,6 @@
     font-family: Poppins;
     margin: 0;
 }
-
 /* estilos col 2 */
 .col2-landing{
     justify-content: end;
@@ -98,7 +95,6 @@
 .contTexto-col2{
     margin-bottom: 10px;
 }
-
 /* estilos col 3 */
 .col3-landing{
     width: 40%;
@@ -199,7 +195,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 48px;
     background-image: url('../../Imagenes/Mar-Del-Plata.webp');
     background-size: cover; /* Hace que la imagen de fondo cubra todo el div */
     background-position: center;
@@ -359,7 +354,7 @@
 }
 @media screen and (max-width: 450px) {
     .contGralLanding-imagen{
-        display: none;
+        
     }
     .cont-info{
         width: 80%;

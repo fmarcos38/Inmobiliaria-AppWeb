@@ -21,7 +21,8 @@ function ListaPropiedades() {
                     props[0] ?
                         props.map(p => {
                             return (
-                                <Card
+                                <div className='cont-card'>
+                                    <Card
                                     key={p.id}
                                     id={p.id}
                                     operacion={p.operacion}
@@ -35,7 +36,9 @@ function ListaPropiedades() {
                                     imagenes={p.imagenes}
                                     descripcion_Breve={p.descripcion_Breve}
                                     precio={p.precio}
+                                    className='card'
                                 />
+                                </div>
                             )
                         }) : (
                             <p>Cargando props ...</p>

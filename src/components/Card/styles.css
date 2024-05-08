@@ -32,12 +32,13 @@
 .card-img{
     width: 100%;
     height: 250px;
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease;
 }
+
 /* estilos msj detalle */
 .detail {
     position: absolute;
-    top: 50;
+    top: 00;
     left: 50;
     width: 100%;
     height: 300px;
@@ -48,11 +49,14 @@
     align-items: center;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.1s ease;
+    transition: opacity 0.3s ease;
 }
 .detail.show {
     display: flex;
     opacity: 1;
+}
+.p-detalle{
+    font-size: x-large;
 }
 /* manejo de info1 */
 .card-info1 {
@@ -80,8 +84,7 @@
     margin: 0 0 0 10px;
 }
 .cont-precio-fav{
-    width: 100%;
-    
+    width: 100%;    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +92,7 @@
 }
 .card-info1 .precio{
     margin-left: 10px;
-    font-size:larger;
+    font-size: 20px;
 }
 /* manejo de info2 */
 .card-info2 {

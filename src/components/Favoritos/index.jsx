@@ -1,35 +1,38 @@
 import React, { useState, useEffect } from 'react';
-import './estilos.css'; // Archivo CSS para los estilos
+import './estilos.css';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 const Favorito = ({ id }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(false);
 
-  // Cargar favoritos desde localStorage al cargar el componente
-  useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    setIsFavorite(favorites.includes(id));
-  }, [id]);
+    // Cargar favoritos desde localStorage al cargar el componente
+    useEffect(() => {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        setIsFavorite(favorites.includes(id));//include retorna true o false
+    }, [id]);
 
-  // Función para alternar el estado de favorito
-  const toggleFavorite = () => {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    // Función para quitar o agregar el id de la prop a favorito
+    const toggleFavorite = () => {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-    if (isFavorite) {
-      const updatedFavorites = favorites.filter(id => id !== id);
-      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    } else {
-      const updatedFavorites = [...favorites, id];
-      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    }
+        if (isFavorite) { //quito
+            // eslint-disable-next-line no-self-compare
+            const updatedFavorites = favorites.filter(id => id !== id);
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+        } else { //agrego
+            const updatedFavorites = [...favorites, id];
+            localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+        }
+        //actualizo estado a lo opuesto
+        setIsFavorite(!isFavorite);
+    };
 
-    setIsFavorite(!isFavorite);
-  };
-
-  return (
-    <button className={`favorite-button ${isFavorite ? 'favorited' : ''}`} onClick={toggleFavorite}>
-      {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-    </button>
-  );
+    return (
+        <button className="favorite-button"  onClick={toggleFavorite}>
+            <FavoriteIcon className={`icono-fav ${isFavorite ? 'favorited' : ''}`}/>
+        </button>
+    );
 };
 
 export default Favorito;

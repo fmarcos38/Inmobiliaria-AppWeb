@@ -20,11 +20,6 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
                 <h2>{operacion} {tipo}</h2>
             </div>
 
-            {/* msj detalle si hay hover */}
-            <div className={`detail ${showDetail ? 'show' : ''}`}>
-                <p>Detalle</p>
-            </div>
-
             <NavLink to={`/detalle/${id}`} className='navLink-car'>
                 <div
                     onMouseEnter={() => setShowDetail(true)}
@@ -33,6 +28,11 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
                     {/* imagen */}
                     <div className='card-image'>
                         <img className='card-img' src={imagenes[0]} alt='not found' />
+                    </div>
+
+                    {/* msj detalle si hay hover */}
+                    <div className={`detail ${showDetail ? 'show' : ''}`}>
+                        <p className='p-detalle'>Detalle</p>
                     </div>
                 </div>
             </NavLink>

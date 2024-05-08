@@ -28,7 +28,7 @@ function Navbar() {
                     {/* menu SOLO Pantalla Grande*/}
                     <ul className='ul-menu-izq'>
                         <li>
-                            <NavLink to='#' >
+                            <NavLink to='/venta' >
                                 Venta
                             </NavLink>
                         </li>

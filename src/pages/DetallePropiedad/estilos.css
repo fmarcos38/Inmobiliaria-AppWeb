@@ -156,8 +156,12 @@
     }
 }
 @media screen and (max-width: 650px){
+    .contGralDetalle{
+        background-image: none;
+        background-color: black;
+    }
     .cont-detail{
-        width: 95%;
+        width: 100%;
     }
     .cont-imgs-info{
         width: 100%;

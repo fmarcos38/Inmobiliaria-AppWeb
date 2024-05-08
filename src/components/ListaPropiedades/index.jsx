@@ -1,18 +1,8 @@
-import { useEffect } from 'react';
 import Card from '../Card';
 import './styles.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProps } from '../../Redux/Actions';
 
 
-function ListaPropiedades() {
-    //me traigo las props falsas
-    const props = useSelector(state => state.propiedades); 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getProps());
-    }, [dispatch]);
+function ListaPropiedades({props}) {
 
     return (
         <div className='cont-listaProps'>            
@@ -21,7 +11,7 @@ function ListaPropiedades() {
                     props[0] ?
                         props.map(p => {
                             return (
-                                <div className='cont-card'>
+                                <div className='cont-card' key={p.id}>
                                     <Card
                                     key={p.id}
                                     id={p.id}

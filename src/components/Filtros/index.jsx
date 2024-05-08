@@ -6,12 +6,13 @@ import { getProps, filtraTipo } from '../../Redux/Actions';
 import { propiedades } from '../../Helps/propiedades';
 
 
-function Filtros() {
+function Filtros({check}) {
 
     //me traigo las props falsas
     const arrPropieda = propiedades; //en un futuro seran de la DB de TOKKO
     const context = useContext(InmobiliariaContext);
     const dispatch = useDispatch();
+
     //funcion q filtra por ventas o alquileres SI alguna de estas opc esta tildada - sino muestra todas las props
     function filtraProps () {
         let props;
@@ -47,20 +48,27 @@ function Filtros() {
     return (
         <div className='cont-principal-filtros'>
             <div className='cont-filtros'>
-                <div className='check-venta-alq'>
-                    <label className='label-venta'>Venta</label>
-                    <input 
-                        type='checkbox' className='input-venta'
-                        checked={context.checkedVenta}
-                        onChange={() => context.actualizaCheckVenta()}
-                    />
-                    <label className='label-alq'>Alquiler</label>
-                    <input 
-                        type='checkbox' className='input-alq'
-                        checked={context.checkedAlquiler}
-                        onChange={() => context.actualizaCheckAlq()}
-                    />
-                </div>
+                {
+                    check ? (
+                        <div style={{'marginTop': '20px'}}></div>
+                    ) : (
+                        <div className='check-venta-alq'>
+                            <label className='label-venta'>Venta</label>
+                            <input
+                                type='checkbox' className='input-venta'
+                                checked={context.checkedVenta}
+                                onChange={() => context.actualizaCheckVenta()}
+                            />
+                            <label className='label-alq'>Alquiler</label>
+                            <input
+                                type='checkbox' className='input-alq'
+                                checked={context.checkedAlquiler}
+                                onChange={() => context.actualizaCheckAlq()}
+                            />
+                        </div>
+                    )
+                }
+                
 
                 <div className='cont-tipo-propiedad'>
                     <div className='tipo-propiedad'>

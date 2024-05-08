@@ -1,8 +1,10 @@
-import React from 'react'
-import './styles.css';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProps } from '../../Redux/Actions';
 import { propiedades } from '../../Helps/propiedades';
 import ListaPropiedades from '../../components/ListaPropiedades';
+import './styles.css';
 /* iconos materiaUI */
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import imgCasaDpto from '../../Imagenes/logoCasaDepto.jpg';
@@ -16,7 +18,12 @@ import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
 function Home() {
 
     const prop1 = propiedades[0];
-    //const prop2 = propiedades[1];
+    const props = useSelector(state => state.propiedades);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getProps());
+    }, [dispatch]);
 
     return (
         <div className='cont-home'>
@@ -99,7 +106,7 @@ function Home() {
             </div>
 
             {/* lista props */}
-            <ListaPropiedades />
+            <ListaPropiedades  props={props}/>
         </div>
     )
 }

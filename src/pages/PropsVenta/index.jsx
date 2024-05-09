@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './estilos.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Filtros from '../../components/Filtros/FiltrosTipoProp';
 import ListaPropiedades from '../../components/ListaPropiedades';
 
 
 function PropsVenta() {
 
-    const props = useSelector(state => state.propsFiltradas);
+    const props = useSelector(state => state.propiedades);
     const soloEnVenta = props.filter(p => p.operacion === 'venta');
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        
-    },[dispatch]);
+    
 
     return (
         <div className='cont-propsVenta'>

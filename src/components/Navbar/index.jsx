@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
@@ -43,7 +43,7 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='#' >
+                            <NavLink to='/contacto' >
                                 Contacto
                             </NavLink>
                         </li>
@@ -52,7 +52,7 @@ function Navbar() {
                 
                 {/* menu Derecha */}
                 <div className='contDer'>
-                    {/* menu Derecho Pantalla Grabde */}            
+                    {/* menu Derecho Pantalla Grande */}            
                     <div className='direccion'>
                         <LocationOnIcon />
                         <p>Sarmiento 2323</p>
@@ -69,14 +69,23 @@ function Navbar() {
                         <span></span>
                         <span></span>
                     </div>
-                    {/* menu desplegable */}
+                    {/* menu desplegable P.chica*/}
                     <div className="menu">
                         {
                             isOpen && (
                                 <ul>
-                                    <li>Hola</li>
-                                    <li>Pepe</li>
-                                    <li>Salis?</li>
+                                    <li>
+                                        <Link to='/'>Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/venta'>Venta</Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/alquiler'>Alquiler</Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/nosotros'>Nosotros</Link>
+                                    </li>
                                 </ul>
                             )
                         }

@@ -20,6 +20,7 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
                 <h2>{operacion} {tipo}</h2>
             </div>
 
+            {/* img + animacion + abre detalle */}
             <NavLink to={`/detalle/${id}`} className='navLink-car'>
                 <div
                     onMouseEnter={() => setShowDetail(true)}
@@ -55,6 +56,7 @@ function Card({ id, operacion, tipo, ambientes, dormitorios, baños, sup, direcc
                     <Favorito id={id} />
                 </div>
             </div>
+            
             {/* info 2 */}
             <div className='card-info2'>
                         <div className='div-info2'>

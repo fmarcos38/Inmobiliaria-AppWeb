@@ -1,0 +1,11 @@
+.cont-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-cont-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

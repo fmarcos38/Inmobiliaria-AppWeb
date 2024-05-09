@@ -13,6 +13,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import CallIcon from '@mui/icons-material/Call';
 import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
+import CotizacionDolar from '../../components/CotizacionDolar';
 
 function Home() {
 
@@ -102,7 +103,9 @@ function Home() {
 
             {/* lista props */}
             <ListaPropiedades props={allProps}/>
-                    
+            
+            {/* cotizaciones */}
+            <CotizacionDolar/>
         </div>
     )
 }

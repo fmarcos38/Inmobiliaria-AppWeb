@@ -93,6 +93,7 @@ a {
     border-radius: 4px;
     overflow: hidden;
     transition: all 0.3s ease;
+    z-index: 3;
 }
 .menu ul {
     list-style: none;

@@ -22,6 +22,7 @@ export default function rootReducer (state = initialState, action) {
         case FILTRA_OPERACION_TIPO: 
             let propsF = [...state.propiedades];
             const {operacion, tipo} = action.payload;
+
             propsF = propsF.filter(p => {
                 if(operacion && tipo){
                     return p.operacion === operacion && p.tipo === tipo;
@@ -32,7 +33,8 @@ export default function rootReducer (state = initialState, action) {
                 }else{
                     return propsF;
                 }
-            });            
+            });  
+            
             return{
                 ...state,
                 propiedades: propsF,
@@ -40,6 +42,7 @@ export default function rootReducer (state = initialState, action) {
         case MUESTRA_DESTACADAS:
             let allProps = [...state.propiedades];
             const {operacionD, destacada} = action.payload;
+
             const destacadas = allProps.filter(p => {
                 if(operacionD && destacada){
                     return p.operacion === operacion && p.destacada === destacada;
@@ -47,6 +50,7 @@ export default function rootReducer (state = initialState, action) {
                     return p.destacada === destacada;
                 }
             });
+            
             return{
                 ...state,
                 propiedades: destacadas

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './estilos.css';
-import { filtraOperacionTipo, getProps, reset_props } from '../../../Redux/Actions';
-import { useDispatch, useSelector } from 'react-redux';
+import { filtraOperacionTipo, getProps } from '../../../Redux/Actions';
+import { useDispatch } from 'react-redux';
 
 
 function Filtros({check}) {
 
-    const allProps = useSelector(state => state.propiedades);
     const dispatch = useDispatch();
 
     //estado para check venta
@@ -15,12 +14,16 @@ function Filtros({check}) {
     const [ checkedAlquiler, setCheckedAlquiler ] = useState(false);
 
     //funcion actualiza check venta
-    const actualizaCheckVenta = () => {
-        setCheckedVenta(!checkedVenta);
-        setCheckedAlquiler(false);
-        dispatch(getProps());
-        dispatch(filtraOperacionTipo({operacion: 'venta'}));
-        
+    const actualizaCheckVenta = (e) => {
+        if(e.target.id === 'check-venta' && e.target.checked === true) {
+            setCheckedVenta(!checkedAlquiler);
+            setCheckedAlquiler(false);
+            dispatch(getProps());
+            dispatch(filtraOperacionTipo({ operacion: 'venta' }));
+        }
+        if(e.target.id === 'check-venta' && e.target.checked === false) {
+            dispatch(getProps());
+        }
     };
     //funcion actualiza check alq
     const actualizaCheckAlq = () => {
@@ -30,7 +33,6 @@ function Filtros({check}) {
         dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
         
     };
-
 
     const handleClick = (e) => {
         switch(e.target.id){
@@ -43,10 +45,15 @@ function Filtros({check}) {
                 }                
                 break;
             case 'casa':
-                
+                if(checkedVenta){;
+                    dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'casa'}));
+                }
+                if(checkedAlquiler){
+                    dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'casa'}));
+                }
                 break;
-            case 'todas':
-                
+            case 'input-venta':
+                dispatch(filtraOperacionTipo());
                 break;
             default:
                 break;
@@ -69,9 +76,10 @@ function Filtros({check}) {
                         <div className='check-venta-alq'>
                             <label className='label-venta'>Venta</label>
                             <input
+                                id='check-venta'
                                 type='checkbox' className='input-venta'
-                                checked={checkedVenta}
-                                onChange={() => actualizaCheckVenta()}
+                                value={checkedVenta}
+                                onChange={(e) => actualizaCheckVenta(e)}
                             />
                             <label className='label-alq'>Alquiler</label>
                             <input

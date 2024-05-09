@@ -1,8 +1,12 @@
-import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, IS_OPEN_MODAL_PICTURE, RESET_DETALLE } from "../Actions/ActionsType";
+import { 
+    DETALLE_PORP, FILTRA_OPERACION_TIPO, GET_PROPS, IS_OPEN_MODAL_PICTURE, 
+    RESET_DETALLE,  
+} from "../Actions/ActionsType";
 
 const initialState = {
     propiedades: [],
     propsFiltradas: [],
+    tipoOp: [],
     detalleProp: {},
     isOpenModalPicture: false,
 };
@@ -14,22 +18,25 @@ export default function rootReducer (state = initialState, action) {
             return {
                 ...state,
                 propiedades: action.payload,
-                propsFiltradas: action.payload,
             };
-        case FILTRA_PROPS:
-            const props = [...state.propiedades];
-            let propsFiltradas = [];
-            
-            if(action.payload === 'todas'){
-                propsFiltradas = [...state.propiedades];
-            }else{
-                propsFiltradas = props.filter(p => p.tipo === action.payload);
-            }
-            
+        case FILTRA_OPERACION_TIPO: 
+            let propsF = [...state.propiedades];
+            const {operacion, tipo} = action.payload;
+            propsF = propsF.filter(p => {
+                if(operacion && tipo){
+                    return p.operacion === operacion && p.tipo === tipo;
+                }else if(operacion){
+                    return p.operacion === operacion;
+                }else if(tipo){
+                    return p.tipo === tipo;
+                }else{
+                    return propsF;
+                }
+            });            
             return{
                 ...state,
-                propsFiltradas: propsFiltradas
-            }; 
+                propiedades: propsF,
+            };
         case DETALLE_PORP:
             const arrProp = [...state.propiedades]; 
             let det_prop = arrProp.find(p => p.id === action.payload);            

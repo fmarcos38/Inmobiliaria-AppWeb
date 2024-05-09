@@ -5,10 +5,10 @@ import Filtros from '../../components/Filtros/FiltrosTipoProp';
 import ListaPropiedades from '../../components/ListaPropiedades';
 
 
-function PropsVenta() {
+function PropsAlquiler() {
 
     const props = useSelector(state => state.propsFiltradas);
-    const soloEnVenta = props.filter(p => p.operacion === 'venta');
+    const soloEnVenta = props.filter(p => p.operacion === 'alquiler');
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -23,4 +23,4 @@ function PropsVenta() {
     )
 }
 
-export default PropsVenta
+export default PropsAlquiler

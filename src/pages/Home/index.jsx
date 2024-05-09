@@ -1,9 +1,9 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProps } from '../../Redux/Actions';
+import {  getProps, reset_props } from '../../Redux/Actions';
 import { Link } from 'react-router-dom';
 import { propiedades } from '../../Helps/propiedades';
+import Filtros from '../../components/Filtros/FiltrosTipoProp';
 import ListaPropiedades from '../../components/ListaPropiedades';
 import './styles.css';
 /* iconos materiaUI */
@@ -13,18 +13,19 @@ import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import CallIcon from '@mui/icons-material/Call';
-import Filtros from '../../components/Filtros';
 import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
 
 function Home() {
 
-    const prop1 = propiedades[0];
-    const props = useSelector(state => state.propsFiltradas); 
+    const prop1 = propiedades[0]; 
+    const allProps = useSelector(state => state.propiedades);
     const dispatch = useDispatch();
 
-    useEffect(() => {
+    /* useEffect(() => {
         dispatch(getProps());
-    }, [dispatch]);
+
+        return () => {dispatch(reset_props())};
+    }, [dispatch]); */
 
     return (
         <div className='cont-home'>
@@ -103,13 +104,13 @@ function Home() {
 
             {/* filtros */}
             <div id='explorarProps'>
-                <Filtros/>
+                <Filtros />
             </div>
             
 
             {/* lista props */}
-            <ListaPropiedades props={props}/>
-
+            <ListaPropiedades props={allProps}/>
+                    
         </div>
     )
 }

@@ -10,6 +10,7 @@ import DetalleProp from './pages/DetallePropiedad';
 import Carrusel from './components/Carrusel';
 import Modal from './components/Modal';
 import PropsVenta from './pages/PropsVenta';
+import PropsAlquiler from './pages/PropsAlquiler';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/detalle/:id' element={<DetalleProp/>}/>
-        <Route path='/venta' element={<PropsVenta/>} />
+        {/* <Route path='/venta' element={<PropsVenta/>} />
+        <Route path='/alquiler' element={<PropsAlquiler/>} /> */}
 
         {/* rutas para el desarrollador */}
         <Route path='/card' element={<Card/>}/>

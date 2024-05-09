@@ -1,42 +1,52 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './estilos.css';
-import { InmobiliariaContext } from '../../Context';
+import { filtraOperacionTipo, getProps, reset_props } from '../../../Redux/Actions';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProps, filtraTipo } from '../../Redux/Actions';
-import { propiedades } from '../../Helps/propiedades';
 
 
 function Filtros({check}) {
 
-    //me traigo las props falsas
-    const arrPropieda = useSelector(state => state.proopsfiltradas); //en un futuro seran de la DB de TOKKO
-    const context = useContext(InmobiliariaContext);
+    const allProps = useSelector(state => state.propiedades);
     const dispatch = useDispatch();
 
-    //funcion q filtra por ventas o alquileres SI alguna de estas opc esta tildada - sino muestra todas las props
-    function filtraProps () {
-        let props;
-        if(context.checkedVenta) {
-            props = arrPropieda.filter(p => p.operacion === 'venta')
-        }else if(context.checkedAlquiler) {
-            props = arrPropieda.filter(p => p.operacion === 'alquiler')
-        }else{
-            props = arrPropieda;
-        }
-        return props;
-    };    
-    let props = filtraProps();
+    //estado para check venta
+    const [ checkedVenta, setCheckedVenta ] = useState(false);
+    //estado para check alq
+    const [ checkedAlquiler, setCheckedAlquiler ] = useState(false);
+
+    //funcion actualiza check venta
+    const actualizaCheckVenta = () => {
+        setCheckedVenta(!checkedVenta);
+        setCheckedAlquiler(false);
+        dispatch(getProps());
+        dispatch(filtraOperacionTipo({operacion: 'venta'}));
+        
+    };
+    //funcion actualiza check alq
+    const actualizaCheckAlq = () => {
+        setCheckedAlquiler(!checkedAlquiler);
+        setCheckedVenta(false);
+        dispatch(getProps());
+        dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
+        
+    };
+
 
     const handleClick = (e) => {
         switch(e.target.id){
             case 'depto':
-                dispatch(filtraTipo('depto'));
+                if(checkedVenta){;
+                    dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'depto'}));
+                }
+                if(checkedAlquiler){
+                    dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'depto'}));
+                }                
                 break;
             case 'casa':
-                dispatch(filtraTipo('casa'));
+                
                 break;
             case 'todas':
-                dispatch(filtraTipo('todas'));
+                
                 break;
             default:
                 break;
@@ -44,10 +54,11 @@ function Filtros({check}) {
     }
 
     useEffect(() => {
-        dispatch(getProps(props));
-    }, [dispatch, props]);
+        dispatch(getProps());
 
-    
+        /* return () => {dispatch(reset_props())}; */
+    }, [dispatch]);
+
     return (
         <div className='cont-principal-filtros'>
             <div className='cont-filtros'>
@@ -59,19 +70,18 @@ function Filtros({check}) {
                             <label className='label-venta'>Venta</label>
                             <input
                                 type='checkbox' className='input-venta'
-                                checked={context.checkedVenta}
-                                onChange={() => context.actualizaCheckVenta()}
+                                checked={checkedVenta}
+                                onChange={() => actualizaCheckVenta()}
                             />
                             <label className='label-alq'>Alquiler</label>
                             <input
                                 type='checkbox' className='input-alq'
-                                checked={context.checkedAlquiler}
-                                onChange={() => context.actualizaCheckAlq()}
+                                checked={checkedAlquiler}
+                                onChange={() => actualizaCheckAlq()}
                             />
                         </div>
                     )
-                }
-                
+                }               
 
                 <div className='cont-tipo-propiedad'>
                     <div className='tipo-propiedad'>
@@ -154,4 +164,24 @@ function Filtros({check}) {
     )
 }
 
-export default Filtros
+export default Filtros;
+
+
+/*
+<div className='check-venta-alq'>
+                                <button id='venta' onClick={(e) => handleClick(e)}>
+                                    Venta
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <button id='alquiler' onClick={(e) => handleClick(e)}>
+                                    Alquiler
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+*/

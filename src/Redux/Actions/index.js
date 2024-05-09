@@ -1,5 +1,8 @@
 import { propiedades } from "../../Helps/propiedades";
-import { DETALLE_PORP, FILTRA_PROPS, GET_PROPS, IS_OPEN_MODAL_PICTURE, RESET_DETALLE } from "./ActionsType";
+import { 
+    DETALLE_PORP, FILTRA_OPERACION_TIPO,  GET_PROPS, IS_OPEN_MODAL_PICTURE, 
+    RESET_DETALLE, RESET_PROPS,  
+} from "./ActionsType";
 
 //trae props
 export const getProps = (props = propiedades) => {
@@ -8,13 +11,19 @@ export const getProps = (props = propiedades) => {
     }
 };
 
-//filtra por tipo de prop
-export const filtraTipo = (tipo) => {
+//filtra por operacion venta
+export const filtraOperacionTipo = (obj) => {
+    console.log("oper: ", obj);
     return function(dispatch){
-        dispatch({type: FILTRA_PROPS, payload: tipo})
+        dispatch({type: FILTRA_OPERACION_TIPO, payload: obj});
     }
 };
 
+export const reset_props = () => {
+    return function(dispatch){
+        dispatch({type: RESET_PROPS});
+    }
+}
 //detalle prop
 export const detalleProp = (id) => {
     return function(dispatch){

@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {  getProps, reset_props } from '../../Redux/Actions';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { propiedades } from '../../Helps/propiedades';
 import Filtros from '../../components/Filtros/FiltrosTipoProp';
@@ -19,13 +18,6 @@ function Home() {
 
     const prop1 = propiedades[0]; 
     const allProps = useSelector(state => state.propiedades);
-    const dispatch = useDispatch();
-
-    /* useEffect(() => {
-        dispatch(getProps());
-
-        return () => {dispatch(reset_props())};
-    }, [dispatch]); */
 
     return (
         <div className='cont-home'>

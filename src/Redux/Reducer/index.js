@@ -1,11 +1,11 @@
 import { 
     DETALLE_PORP, FILTRA_OPERACION_TIPO, GET_PROPS, IS_OPEN_MODAL_PICTURE, 
+    MUESTRA_DESTACADAS, 
     RESET_DETALLE,  
 } from "../Actions/ActionsType";
 
 const initialState = {
     propiedades: [],
-    propsFiltradas: [],
     tipoOp: [],
     detalleProp: {},
     isOpenModalPicture: false,
@@ -36,6 +36,20 @@ export default function rootReducer (state = initialState, action) {
             return{
                 ...state,
                 propiedades: propsF,
+            };
+        case MUESTRA_DESTACADAS:
+            let allProps = [...state.propiedades];
+            const {operacionD, destacada} = action.payload;
+            const destacadas = allProps.filter(p => {
+                if(operacionD && destacada){
+                    return p.operacion === operacion && p.destacada === destacada;
+                }else{
+                    return p.destacada === destacada;
+                }
+            });
+            return{
+                ...state,
+                propiedades: destacadas
             };
         case DETALLE_PORP:
             const arrProp = [...state.propiedades]; 

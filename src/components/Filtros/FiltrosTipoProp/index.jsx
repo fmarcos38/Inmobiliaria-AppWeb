@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './estilos.css';
-import { filtraOperacionTipo, getProps } from '../../../Redux/Actions';
+import { filtraOperacionTipo, getProps, muestraDestacadas} from '../../../Redux/Actions';
 import { useDispatch } from 'react-redux';
 
 
 function Filtros({check}) {
 
-    const dispatch = useDispatch();
-
     //estado para check venta
     const [ checkedVenta, setCheckedVenta ] = useState(false);
     //estado para check alq
     const [ checkedAlquiler, setCheckedAlquiler ] = useState(false);
+    const dispatch = useDispatch();
 
     //funcion actualiza check venta
     const actualizaCheckVenta = (e) => {
@@ -26,34 +25,118 @@ function Filtros({check}) {
         }
     };
     //funcion actualiza check alq
-    const actualizaCheckAlq = () => {
-        setCheckedAlquiler(!checkedAlquiler);
-        setCheckedVenta(false);
-        dispatch(getProps());
-        dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
-        
+    const actualizaCheckAlq = (e) => {
+        if(e.target.id === 'check-alquiler' && e.target.checked === true){
+            setCheckedAlquiler(!checkedAlquiler);
+            setCheckedVenta(false);
+            dispatch(getProps());
+            dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
+        }
+        if(e.target.id === 'check-alquiler' && e.target.checked === false){
+            dispatch(getProps());
+        }
     };
 
     const handleClick = (e) => {
         switch(e.target.id){
             case 'depto':
                 if(checkedVenta){;
+                    dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'depto'}));
-                }
-                if(checkedAlquiler){
+                }else if(checkedAlquiler){
+                    dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'depto'}));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'depto'}));
                 }                
                 break;
             case 'casa':
                 if(checkedVenta){;
+                    dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'casa'}));
-                }
-                if(checkedAlquiler){
+                }else if(checkedAlquiler){
+                    dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'casa'}));
-                }
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'casa'}));
+                } 
                 break;
-            case 'input-venta':
-                dispatch(filtraOperacionTipo());
+            case 'ph':
+                if(checkedVenta){;
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'ph'}));
+                }else if(checkedAlquiler){
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'ph'}));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'ph'}));
+                } 
+                break;
+            case 'local':
+                if (checkedVenta) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'local' }));
+                }else if (checkedAlquiler) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'local' }));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'local'}));
+                } 
+                break;
+            case 'terreno':
+                if (checkedVenta) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'terreno' }));
+                }else if (checkedAlquiler) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'terreno' }));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'terreno'}));
+                } 
+                break;
+            case 'oficina':
+                if (checkedVenta) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'oficina' }));
+                }else if (checkedAlquiler) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'oficina' }));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'oficina'}));
+                } 
+                break;
+            case 'cochera':
+                if (checkedVenta) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'cochera' }));
+                }else if (checkedAlquiler) {
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'cochera' }));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'cochera'}));
+                } 
+                break;
+            case 'destacada':
+                if (checkedVenta) {
+                    dispatch(getProps());
+                    dispatch(muestraDestacadas({ operacion: 'venta', destacada: true }));
+                }else if (checkedAlquiler) {
+                    dispatch(getProps());
+                    dispatch(muestraDestacadas({ operacion: 'alquiler', destacada: true }));
+                }else{
+                    dispatch(getProps());
+                    dispatch(filtraOperacionTipo({tipo: 'destacada'}));
+                } 
+                break;
+            case 'todas':
+                dispatch(getProps());
                 break;
             default:
                 break;
@@ -62,8 +145,6 @@ function Filtros({check}) {
 
     useEffect(() => {
         dispatch(getProps());
-
-        /* return () => {dispatch(reset_props())}; */
     }, [dispatch]);
 
     return (
@@ -83,9 +164,10 @@ function Filtros({check}) {
                             />
                             <label className='label-alq'>Alquiler</label>
                             <input
+                            id='check-alquiler'
                                 type='checkbox' className='input-alq'
-                                checked={checkedAlquiler}
-                                onChange={() => actualizaCheckAlq()}
+                                value={checkedAlquiler}
+                                onChange={(e) => actualizaCheckAlq(e)}
                             />
                         </div>
                     )
@@ -107,7 +189,7 @@ function Filtros({check}) {
                             <span></span>
                             <span></span>
                         </button>
-                        <button>
+                        <button id='ph' onClick={(e) => handleClick(e)}>
                             PH
                             <span></span>
                             <span></span>
@@ -117,28 +199,28 @@ function Filtros({check}) {
                     </div>
 
                     <div>
-                        <button>
+                        <button id='local' onClick={(e) => handleClick(e)}>
                             Locales
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
-                        <button>
+                        <button id='terreno' onClick={(e) => handleClick(e)}>
                             Terreno
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
-                        <button>
+                        <button id='oficina' onClick={(e) => handleClick(e)}>
                             Oficinas
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </button>
-                        <button>
+                        <button id='cochera' onClick={(e) => handleClick(e)}>
                             Cocheras
                             <span></span>
                             <span></span>
@@ -148,7 +230,7 @@ function Filtros({check}) {
                     </div>
 
                     <div>
-                        <button className='btn-props-dest'>
+                        <button className='btn-props-dest' id='destacada' onClick={(e) => handleClick(e)}>
                             Propiedades destacadas
                             <span></span>
                             <span></span>

@@ -1,6 +1,7 @@
 import { propiedades } from "../../Helps/propiedades";
 import { 
     DETALLE_PORP, FILTRA_OPERACION_TIPO,  GET_PROPS, IS_OPEN_MODAL_PICTURE, 
+    MUESTRA_DESTACADAS, 
     RESET_DETALLE, RESET_PROPS,  
 } from "./ActionsType";
 
@@ -13,12 +14,15 @@ export const getProps = (props = propiedades) => {
 
 //filtra por operacion venta
 export const filtraOperacionTipo = (obj) => {
-    console.log("oper: ", obj);
     return function(dispatch){
         dispatch({type: FILTRA_OPERACION_TIPO, payload: obj});
     }
 };
-
+export const muestraDestacadas = (obj) => {
+    return function(dispatch){
+        dispatch({type:MUESTRA_DESTACADAS, payload:obj});
+    }
+};
 export const reset_props = () => {
     return function(dispatch){
         dispatch({type: RESET_PROPS});

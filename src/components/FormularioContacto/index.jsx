@@ -2,6 +2,8 @@ import React, { useRef  } from 'react';
 import emailjs from 'emailjs-com';
 import './styles.css';
 
+import Button from '@mui/material/Button';
+
 
 const ContactForm = () => {
 
@@ -19,26 +21,29 @@ const ContactForm = () => {
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail} className='cont-formulario'>
-            <div className='div-cont-form'>
-                <div class="form__group field">
-                    <input required  class="form__field" placeholder="Name" type="text" name='user_name'/>
+        <>
+            <form ref={form} onSubmit={sendEmail} className='cont-formulario'>
+                <div className='div-cont-form'>
+                    <div class="form__group field">
+                        <input required class="form__field" placeholder="Name" type="text" name='user_name' />
                         <label class="form__label" for="name">Nombre y Apellido</label>
-                </div>
+                    </div>
 
-                <div class="form__group field">
-                    <input required  class="form__field" placeholder="Name" type="email" name="user_email"/>
+                    <div class="form__group field">
+                        <input required class="form__field" placeholder="Name" type="email" name="user_email" />
                         <label class="form__label" for="name">Email</label>
-                </div>
+                    </div>
 
-                <div class="form__group field">
-                    <textarea required  class="form__field" placeholder="Name" name="message"/>
+                    <div class="form__group field">
+                        <textarea required class="form__field textarea-form-contacto" placeholder="Name" name="message" />
                         <label class="form__label" for="name">Mensaje</label>
+                    </div>
+                    <div className='btn-enviar-contacto'>
+                        <Button variant="outlined" type="submit" >Enviar</Button>
+                    </div>
                 </div>
-
-                <input type="submit" value="Send" />
-            </div>
-        </form>
+            </form>
+        </>
     );
 };
 

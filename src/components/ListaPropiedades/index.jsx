@@ -3,15 +3,14 @@ import './styles.css';
 
 function ListaPropiedades({props}) {
 
-
     return (
         <div className='cont-listaProps'>            
             <div className='contListaP'>
                 {
                     props[0] ?
-                        props.map(p => {
-                            return (
-                                <div className='cont-card' key={p.id}>
+                    props.map(p => {
+                        return (
+                            <div className='cont-card' key={p.id}>
                                     <Card
                                     key={p.id}
                                     id={p.id}
@@ -28,11 +27,13 @@ function ListaPropiedades({props}) {
                                     precio={p.precio}
                                     className='card'
                                 />
-                                </div>
-                            )
-                        }) : (
-                            <p>Cargando props ...</p>
+                            </div>
                         )
+                    }) : (
+                        <div className='no-props'>
+                            <h1>No hay props para dicha busqueda...</h1>
+                        </div>
+                    )
                 }
             </div>
         </div>

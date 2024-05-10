@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './estilos.css';
 import { filtraOperacionTipo, getProps, muestraDestacadas} from '../../../Redux/Actions';
 import { useDispatch } from 'react-redux';
@@ -142,10 +142,6 @@ function Filtros({check}) {
                 break;
         }
     }
-
-    useEffect(() => {
-        dispatch(getProps());
-    }, [dispatch]);
 
     return (
         <div className='cont-principal-filtros'>

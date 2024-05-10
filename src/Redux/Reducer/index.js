@@ -1,12 +1,12 @@
 import { 
-    DETALLE_PORP, FILTRA_OPERACION_TIPO, GET_PROPS, IS_OPEN_MODAL_PICTURE, 
-    MUESTRA_DESTACADAS, 
+    DETALLE_PORP, FILTRA_OPERACION_TIPO, GET_PROPS, IS_OPEN_MODAL_PICTURE, LOADING, MUESTRA_DESTACADAS, 
     RESET_DETALLE,  
 } from "../Actions/ActionsType";
 
 const initialState = {
     propiedades: [],
     tipoOp: [],
+    loading: true,
     detalleProp: {},
     isOpenModalPicture: false,
 };
@@ -14,9 +14,15 @@ const initialState = {
 
 export default function rootReducer (state = initialState, action) {
     switch(action.type){
+        case LOADING:
+        return{
+            ...state,
+            loading: true
+        };
         case GET_PROPS:
             return {
                 ...state,
+                loading: false,
                 propiedades: action.payload,
             };
         case FILTRA_OPERACION_TIPO: 

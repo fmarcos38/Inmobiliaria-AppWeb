@@ -1,23 +1,11 @@
-import React, { useState, useRef  } from 'react';
+import React, { useRef  } from 'react';
 import emailjs from 'emailjs-com';
 import './styles.css';
 
 
 const ContactForm = () => {
-    /* const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    }); */
-    const form = useRef();
 
-    /* const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    }; */
+    const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -28,25 +16,26 @@ const ContactForm = () => {
             }, (error) => {
                 console.log(error.text);
             });
-
-        
-        // Limpia el formulario después de enviar
-        /* setFormData({
-            name: '',
-            email: '',
-            message: ''
-        }); */
     };
 
     return (
         <form ref={form} onSubmit={sendEmail} className='cont-formulario'>
             <div className='div-cont-form'>
-                <label>Name</label>
-                <input type="text" name="user_name" />
-                <label>Email</label>
-                <input type="email" name="user_email" />
-                <label>Message</label>
-                <textarea name="message" />
+                <div class="form__group field">
+                    <input required  class="form__field" placeholder="Name" type="text" name='user_name'/>
+                        <label class="form__label" for="name">Nombre y Apellido</label>
+                </div>
+
+                <div class="form__group field">
+                    <input required  class="form__field" placeholder="Name" type="email" name="user_email"/>
+                        <label class="form__label" for="name">Email</label>
+                </div>
+
+                <div class="form__group field">
+                    <textarea required  class="form__field" placeholder="Name" name="message"/>
+                        <label class="form__label" for="name">Mensaje</label>
+                </div>
+
                 <input type="submit" value="Send" />
             </div>
         </form>

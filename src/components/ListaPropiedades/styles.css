@@ -15,6 +15,12 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.no-props{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
 /* responsive */
 
 @media screen and (max-width: 950px) {

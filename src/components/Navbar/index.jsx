@@ -3,7 +3,7 @@ import './styles.css';
 import { Link, NavLink } from 'react-router-dom';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-
+import logo from '../../Imagenes/Logo-Flor-2.jpg'
 
 function Navbar() {
 
@@ -21,8 +21,7 @@ function Navbar() {
                     {/* logo */}
                     <h1>
                         <NavLink to='/' >
-                            {/* <img src={logo} alt='img not found' className='logo' /> */}
-                            <p className='logo'>Inmobiliaria <b>Mendive</b></p>
+                            <img src={logo} alt='img not found' className='logo-navbar' />
                         </NavLink>
                     </h1>
                     {/* menu SOLO Pantalla Grande*/}

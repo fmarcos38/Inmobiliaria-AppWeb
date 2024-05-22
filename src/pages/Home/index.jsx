@@ -68,7 +68,7 @@ function Home() {
                                             <p className='texto-col3-comprar'><b>Queres comprar</b></p>
                                             <p className='texto-col3-texto'>Tenemos la propirdad que estás buscando</p>
                                             <p className='texto-col3-vender'><b>Queres vender</b></p>
-                                            <p className='texto-col3-texto'>Realizamos tazaciones, acesoramos</p>
+                                            <p className='texto-col3-texto'>Realizamos tasaciones, acesoramos</p>
                                             <p className='texto-col3-nuestroClientes'><b>Nuestros clientes nos avalan</b></p>
                                             <Link to={'/formularioContacto'} className='linkContacto'>
                                                 <p className='texto-col3-texto-link'>No dudes en contactartos</p>
@@ -86,7 +86,7 @@ function Home() {
                                 </div>
                             </div>
 
-                            {/* zocalo */}
+                            {/* socalo */}
                             <h2 className='zocalo'>Encuentra la propiedad que estás buscando</h2>
                         </div>
 

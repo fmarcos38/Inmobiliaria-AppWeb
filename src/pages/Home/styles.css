@@ -1,6 +1,6 @@
 
 .contGralLanding-imagen{
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 650px;
     display: flex;
@@ -176,12 +176,13 @@
     margin-left: 5px;
 }
 .zocalo {
+    position: absolute;
     width: auto;
     display: flex;
     position: absolute;
     justify-content: center;
     align-self: center;
-    top: 608px;
+    top: 668px;
     padding: 8px 10px;
     border-radius: 20px;
     background-color: rgba(239, 244, 242, 0.999);
@@ -206,6 +207,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -252,7 +254,7 @@
         height: 550px;
     }
     .zocalo{
-        top: 510px;
+        top: 570px;
     }
     .contLanding{
         width: 90%;
@@ -325,6 +327,11 @@
         background-color: aquamarine;
     }
 }
+@media screen and (max-width: 750px) {
+    .zocalo{
+        top: 555px;
+    } 
+}
 @media screen and (min-width: 600px){
     .home-pantChica{
         display: none;
@@ -352,10 +359,7 @@
         margin: 0;
     }
 }
-@media screen and (max-width: 450px) {
-    .contGralLanding-imagen{
-        
-    }
+@media screen and (max-width: 450px) {    
     .cont-info{
         width: 80%;
         height: 300px;

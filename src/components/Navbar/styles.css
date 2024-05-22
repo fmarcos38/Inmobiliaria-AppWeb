@@ -6,7 +6,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 4rem;
+    height: auto;
     /* margin-bottom: 10px; */
     border-bottom: 1px solid #b1b5b5;
     box-shadow: 0 0 10px #9a9d9d;
@@ -29,10 +29,12 @@ nav {
     width: 60%;
     height: 4.5rem;
 }
-.logo{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.logo-navbar{
+    position: relative; /* para q se vea sobre la landing */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 5px;
 }
 .ul-menu-izq{
     display: flex;
@@ -181,6 +183,11 @@ a {
     }
     .ul-menu-izq{
         display: none;
+    }
+    .logo-navbar{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
     }
     /* menu hambur pantalla chica*/
     .menu-icon {

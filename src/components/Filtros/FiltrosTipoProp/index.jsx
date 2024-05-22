@@ -155,6 +155,7 @@ function Filtros({check}) {
                             <input
                                 id='check-venta'
                                 type='checkbox' className='input-venta'
+                                checked={checkedVenta}
                                 value={checkedVenta}
                                 onChange={(e) => actualizaCheckVenta(e)}
                             />
@@ -162,6 +163,7 @@ function Filtros({check}) {
                             <input
                             id='check-alquiler'
                                 type='checkbox' className='input-alq'
+                                checked={checkedAlquiler}
                                 value={checkedAlquiler}
                                 onChange={(e) => actualizaCheckAlq(e)}
                             />

@@ -1,49 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './estilos.css';
-import { filtraOperacionTipo, getProps, muestraDestacadas} from '../../../Redux/Actions';
+import { filtraOperacionTipo, getProps, muestraDestacadas} from '../../Redux/Actions';
 import { useDispatch } from 'react-redux';
 
 
 function Filtros({check}) {
 
     //estado para check venta
-    const [ checkedVenta, setCheckedVenta ] = useState(false);
-    //estado para check alq
-    const [ checkedAlquiler, setCheckedAlquiler ] = useState(false);
+    const [ operacion, setOperacion ] = useState('all'); 
     const dispatch = useDispatch();
-
-    //funcion actualiza check venta
-    const actualizaCheckVenta = (e) => {
-        if(e.target.id === 'check-venta' && e.target.checked === true) {
-            setCheckedVenta(!checkedAlquiler);
-            setCheckedAlquiler(false);
-            dispatch(getProps());
-            dispatch(filtraOperacionTipo({ operacion: 'venta' }));
-        }
-        if(e.target.id === 'check-venta' && e.target.checked === false) {
-            dispatch(getProps());
-        }
+    //funcion onChange para los checkbox
+    const handleOnChangeOperacion = (e) => {
+        const { value } = e.target;
+        setOperacion(value === operacion ? 'all' : value);
     };
-    //funcion actualiza check alq
-    const actualizaCheckAlq = (e) => {
-        if(e.target.id === 'check-alquiler' && e.target.checked === true){
-            setCheckedAlquiler(!checkedAlquiler);
-            setCheckedVenta(false);
-            dispatch(getProps());
-            dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
-        }
-        if(e.target.id === 'check-alquiler' && e.target.checked === false){
-            dispatch(getProps());
-        }
-    };
-
+    //para los btns
     const handleClick = (e) => {
         switch(e.target.id){
             case 'depto':
-                if(checkedVenta){;
+                if(operacion){;
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'depto'}));
-                }else if(checkedAlquiler){
+                }else if(operacion){
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'depto'}));
                 }else{
@@ -52,10 +30,10 @@ function Filtros({check}) {
                 }                
                 break;
             case 'casa':
-                if(checkedVenta){;
+                if(operacion){;
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'casa'}));
-                }else if(checkedAlquiler){
+                }else if(operacion){
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'casa'}));
                 }else{
@@ -64,10 +42,10 @@ function Filtros({check}) {
                 } 
                 break;
             case 'ph':
-                if(checkedVenta){;
+                if(operacion){;
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'ph'}));
-                }else if(checkedAlquiler){
+                }else if(operacion){
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'ph'}));
                 }else{
@@ -76,10 +54,10 @@ function Filtros({check}) {
                 } 
                 break;
             case 'local':
-                if (checkedVenta) {
+                if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'local' }));
-                }else if (checkedAlquiler) {
+                }else if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'local' }));
                 }else{
@@ -88,10 +66,10 @@ function Filtros({check}) {
                 } 
                 break;
             case 'terreno':
-                if (checkedVenta) {
+                if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'terreno' }));
-                }else if (checkedAlquiler) {
+                }else if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'terreno' }));
                 }else{
@@ -100,10 +78,10 @@ function Filtros({check}) {
                 } 
                 break;
             case 'oficina':
-                if (checkedVenta) {
+                if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'oficina' }));
-                }else if (checkedAlquiler) {
+                }else if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'oficina' }));
                 }else{
@@ -112,10 +90,10 @@ function Filtros({check}) {
                 } 
                 break;
             case 'cochera':
-                if (checkedVenta) {
+                if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'cochera' }));
-                }else if (checkedAlquiler) {
+                }else if (operacion) {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'cochera' }));
                 }else{
@@ -124,10 +102,10 @@ function Filtros({check}) {
                 } 
                 break;
             case 'destacada':
-                if (checkedVenta) {
+                if (operacion) {
                     dispatch(getProps());
                     dispatch(muestraDestacadas({ operacion: 'venta', destacada: true }));
-                }else if (checkedAlquiler) {
+                }else if (operacion) {
                     dispatch(getProps());
                     dispatch(muestraDestacadas({ operacion: 'alquiler', destacada: true }));
                 }else{
@@ -143,6 +121,22 @@ function Filtros({check}) {
         }
     }
 
+    //useEffect para actualizar estado global de las props
+    useEffect(() => {
+        if(operacion === 'all'){
+            dispatch(getProps());
+        }
+        if(operacion === 'venta'){
+            dispatch(getProps);
+            dispatch(filtraOperacionTipo({operacion: 'venta'}));
+        }
+        if(operacion === 'alquiler'){
+            dispatch(getProps);
+            dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
+        }
+    }, [dispatch, operacion]);
+
+
     return (
         <div className='cont-principal-filtros'>
             <div className='cont-filtros'>
@@ -154,18 +148,20 @@ function Filtros({check}) {
                             <label className='label-venta'>Venta</label>
                             <input
                                 id='check-venta'
-                                type='checkbox' className='input-venta'
-                                checked={checkedVenta}
-                                value={checkedVenta}
-                                onChange={(e) => actualizaCheckVenta(e)}
+                                type='checkbox'
+                                value="venta" 
+                                className='input-venta'
+                                checked={operacion === 'venta'} /* esto quiere decir -> cuando está seleccionado operacion se vuelve venta */
+                                onChange={(e) => handleOnChangeOperacion(e)}
                             />
                             <label className='label-alq'>Alquiler</label>
                             <input
-                            id='check-alquiler'
-                                type='checkbox' className='input-alq'
-                                checked={checkedAlquiler}
-                                value={checkedAlquiler}
-                                onChange={(e) => actualizaCheckAlq(e)}
+                                id='check-alquiler'
+                                type='checkbox' 
+                                value="alquiler"
+                                className='input-alq'
+                                checked={operacion === 'alquiler'}
+                                onChange={(e) => handleOnChangeOperacion(e)}
                             />
                         </div>
                     )
@@ -253,23 +249,3 @@ function Filtros({check}) {
 }
 
 export default Filtros;
-
-
-/*
-<div className='check-venta-alq'>
-                                <button id='venta' onClick={(e) => handleClick(e)}>
-                                    Venta
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                                <button id='alquiler' onClick={(e) => handleClick(e)}>
-                                    Alquiler
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-*/

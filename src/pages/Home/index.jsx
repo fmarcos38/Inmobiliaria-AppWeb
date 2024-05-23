@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { getProps} from '../../Redux/Actions';
 import { Link } from 'react-router-dom';
 import { propiedades } from '../../Helps/propiedades';
-import Filtros from '../../components/Filtros/FiltrosTipoProp';
+import Filtros from '../../components/Filtros';
 import ListaPropiedades from '../../components/ListaPropiedades';
 import { useDispatch } from 'react-redux';
 import './styles.css';

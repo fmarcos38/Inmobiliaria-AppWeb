@@ -1,6 +1,6 @@
 import { 
     DETALLE_PORP, FILTRA_OPERACION_TIPO, GET_PROPS, IS_OPEN_MODAL_PICTURE, LOADING, MUESTRA_DESTACADAS, 
-    RESET_DETALLE,  
+    RESET_DETALLE, FILTRA_PRECIO 
 } from "../Actions/ActionsType";
 
 const initialState = {
@@ -74,10 +74,24 @@ export default function rootReducer (state = initialState, action) {
                 detalleProp: {}
             };
         case IS_OPEN_MODAL_PICTURE:
-            return{
+            return {
                 ...state,
                 isOpenModalPicture: !state.isOpenModalPicture,
             };
+        case FILTRA_PRECIO:
+            const allPropsP = [...state.propiedades];
+            let resultPropsPrecio = allPropsP.filter(prop => (prop.precio >= action.payload.min)  && (prop.precio <= action.payload.max));
+            let resultPropsTipo = resultPropsPrecio.filter(prop => {
+                if(action.payload.operacion !== 'all'){
+                    return prop.operacion === action.payload.operacion; 
+                }else{
+                    return prop;
+                }
+            });
+            return {
+                ...state,
+                propiedades: resultPropsTipo
+        };
         default:
             return state;
     }

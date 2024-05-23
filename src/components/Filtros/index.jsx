@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import './estilos.css';
+import React, { useEffect, useState } from 'react';
 import { filtraOperacionTipo, getProps, muestraDestacadas} from '../../Redux/Actions';
 import { useDispatch } from 'react-redux';
-
+import FiltraPrecio from './FIltroRangoPrecio';
+import './estilos.css';
 
 function Filtros({check}) {
 
@@ -123,16 +123,16 @@ function Filtros({check}) {
 
     //useEffect para actualizar estado global de las props
     useEffect(() => {
-        if(operacion === 'all'){
+        if (operacion === 'all') {
             dispatch(getProps());
         }
-        if(operacion === 'venta'){
-            dispatch(getProps);
-            dispatch(filtraOperacionTipo({operacion: 'venta'}));
+        if (operacion === 'venta') {
+            dispatch(getProps());
+            dispatch(filtraOperacionTipo({ operacion: 'venta' }));
         }
-        if(operacion === 'alquiler'){
-            dispatch(getProps);
-            dispatch(filtraOperacionTipo({operacion: 'alquiler'}));
+        if (operacion === 'alquiler') {
+            dispatch(getProps());
+            dispatch(filtraOperacionTipo({ operacion: 'alquiler' }));
         }
     }, [dispatch, operacion]);
 
@@ -242,6 +242,10 @@ function Filtros({check}) {
                             <span></span>
                         </button>
                     </div>
+                </div>
+
+                <div className='cont-filtra-precio'>
+                    <FiltraPrecio operacion={operacion}/>
                 </div>
             </div>
         </div>

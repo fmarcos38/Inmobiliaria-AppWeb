@@ -1,8 +1,7 @@
 import { propiedades } from "../../Helps/propiedades";
 import { 
     DETALLE_PORP, FILTRA_OPERACION_TIPO,  GET_PROPS, IS_OPEN_MODAL_PICTURE, 
-    LOADING, 
-    MUESTRA_DESTACADAS, RESET_DETALLE,   
+    LOADING, MUESTRA_DESTACADAS, RESET_DETALLE, FILTRA_PRECIO,  
 } from "./ActionsType";
 
 
@@ -48,3 +47,10 @@ export const isOpenModalPicture = () => {
         dispatch({type: IS_OPEN_MODAL_PICTURE});
     }
 };
+
+//filtra por precio min y max
+export const filtraPrecio =(data) => {console.log("data", data)
+    return function(dispatch){
+        dispatch({type: FILTRA_PRECIO, payload: data});
+    }
+}

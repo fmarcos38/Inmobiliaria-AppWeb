@@ -159,7 +159,14 @@ button span:nth-child(4){
     }
 }
 
-
+/* estilos cont filtra precio */
+.cont-filtra-precio{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f22ade;
+}
 
 /* responsive */
 @media screen and (max-width: 1024px){

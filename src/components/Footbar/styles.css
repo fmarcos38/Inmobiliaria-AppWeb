@@ -8,11 +8,10 @@
     flex-direction: column;
     justify-content: center;  
     align-items: center;
-    background-color: #787a78a4;
+    background-color: rgb(179, 227, 193);
 }
 .footer {
     width: 80%;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,34 +26,36 @@ footer ul {
     display: flex;
     width: 100%;
 }
-footer .iso {
-    width: 70px;
-    height: auto;
+.logo-footbar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
 }
 footer ul li {
     display: inline-block;
     position: relative;
     width: 35%;
 }
+/* color linea sup */
 footer ul li h2 {
     display: block;
     margin-bottom: 3px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #080808;
 }
 footer ul li h4 p {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    color: #e3e8ea;
     font-size: .833vw;
     line-height: .9vw;
     text-transform: uppercase;
     font-weight: 800;
     vertical-align: middle;
 }
+/* color de las letras aquí */
 footer ul li p {
     display: block;
-    color: #e3e8ea;
+    color: #0f0f0f;
     font-size: small;
 }
 .divLinks{
@@ -68,11 +69,12 @@ footer ul li p {
     align-items: center;
     width: 80%;  
 }
+/* estilos linea inferior */
 .line {
     margin-top: 10px;
     width: 100%; /* Ancho de la línea */
     height: 1px; /* Grosor de la línea */
-    background-color: #e3e8ea; /* Color de la línea */
+    background-color: #0c0c0c; /* Color de la línea */
 }
 footer span {
     width: 90%;
@@ -88,6 +90,11 @@ footer span {
         flex-direction: column;
         width: 100%;
         margin-right: 20px;
+    }
+    .logo-footbar {
+        width: 120px;
+        height: 120px;
+        margin-top: 20px;
     }
     footer ul {
         display: flex;
@@ -107,9 +114,20 @@ footer span {
         margin-bottom: 5px;
         border-bottom: 1px solid #ccc;
     }
+    .divLinks{
+        justify-content: center;
+        align-items: center;
+    }
     footer ul li h4 p, footer ul li p, footer ul li .link {
         font-size: 15px;
         line-height: 17px;
+        display: flex;
+        justify-content: center;
+    }
+    .cont-iconos-redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

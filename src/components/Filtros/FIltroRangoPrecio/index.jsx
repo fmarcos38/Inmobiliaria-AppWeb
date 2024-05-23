@@ -54,7 +54,7 @@ const FiltraPrecio = ({operacion}) => {
                 />
             </div>
             <div className="price-range-values">
-                <span>${minPrice.toLocaleString()}</span> - <span>${maxPrice.toLocaleString()}</span>
+                <span>U$D{minPrice.toLocaleString()}</span> - <span>U$D{maxPrice.toLocaleString()}</span>
             </div>
             {/* btn aplicar filtro precio */}
             <button 

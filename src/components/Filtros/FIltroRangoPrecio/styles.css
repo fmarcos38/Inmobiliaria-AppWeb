@@ -16,7 +16,6 @@
 .slider {
     width: 45%;
     height: 6px;
-    background: #ddd;
     outline: none;
     opacity: 0.7;
     transition: opacity 0.2s;
@@ -32,6 +31,15 @@
     margin-bottom: 10px;
 }
 .btn-filtra-precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: auto;
     padding: 8px;
+}
+
+@media screen and (max-width: 450px){
+    .price-range-values {
+        margin-top: 20px;
+    }
 }

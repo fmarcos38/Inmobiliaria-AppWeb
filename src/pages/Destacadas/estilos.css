@@ -1,0 +1,13 @@
+.cont-prop-Venta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cont-titulo-props-venta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(111,199,140);
+    background: radial-gradient(circle, rgba(111,199,140,0.9445028011204482) 11%, rgba(175,126,191,1) 100%);
+}

@@ -4,15 +4,18 @@ import Navbar from './components/Navbar';
 import Redes from './components/Redes';
 import Footbar from './components/Footbar';
 import Card from './components/Card';
-import Home from './pages/Home';
-import { InmobiliariaProvider } from './Context';
-import DetalleProp from './pages/DetallePropiedad';
 import Carrusel from './components/Carrusel';
 import Modal from './components/Modal';
+import ContactForm from './components/FormularioContacto';
+import Home from './pages/Home';
+import DetalleProp from './pages/DetallePropiedad';
 import PropsVenta from './pages/PropsVenta';
 import PropsAlquiler from './pages/PropsAlquiler';
-import Nosotros from './components/Nosotros';
-import ContactForm from './components/FormularioContacto';
+import Nosotros from './pages/Nosotros';
+import PropsDestacadas from './pages/Destacadas';
+import { InmobiliariaProvider } from './Context';
+
+
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
         <Route path='/detalle/:id' element={<DetalleProp/>}/>
         <Route path='/venta' element={<PropsVenta/>} />
         <Route path='/alquiler' element={<PropsAlquiler/>} />
+        <Route path='/destacadas' element={<PropsDestacadas/>} />
         <Route path='/nosotros' element={<Nosotros/>} />
         <Route path='/contacto' element={<ContactForm/>} />
 

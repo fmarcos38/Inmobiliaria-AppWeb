@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(190, 186, 186);
+    background: rgb(111,199,140);
+    background: radial-gradient(circle, rgba(111,199,140,0.9445028011204482) 11%, rgba(175,126,191,1) 100%);
 }
 .cont-filtros{
     display: flex;
@@ -165,7 +166,8 @@ button span:nth-child(4){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f22ade;
+    border-radius: 20px;
+    background-color: #3e3d3e;
 }
 
 /* responsive */
@@ -183,12 +185,13 @@ button span:nth-child(4){
         font-weight: 500;
     }
 }
-@media screen and (max-width: 920px){
+@media screen and (max-width: 950px){
     .cont-principal-filtros{
         background: rgba(112, 233, 152, 0.904);
         background: radial-gradient(circle, rgba(115, 233, 154, 0.893) 11%, rgba(207, 160, 223, 0.915) 100%);
     }
     .cont-tipo-propiedad{
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -223,15 +226,27 @@ button span:nth-child(4){
         height:25px;
         font-size: 18px;
     }
+    /* estilos cont filtra precio */
+.cont-filtra-precio{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #3e3d3e;
+}
 }
 @media screen and (max-width: 450px){
     .cont-principal-filtros{
         width: 100%;
-        height: 170px;
+        height: auto;
     }
     .cont-filtros{
         margin-top: 20px;
         margin-bottom: 15px;
+    }
+    .cont-tipo-propiedad{
+        margin-bottom: 10px;
     }
     /* boton animado */
     button{
@@ -244,6 +259,10 @@ button span:nth-child(4){
         height:22px;
         font-size: 15px;
     }
+    /* estilos cont filtra precio */
+.cont-filtra-precio{
+    width: 100%;
+}
 }
 @media screen and (max-width: 300px){
     .cont-principal-filtros{

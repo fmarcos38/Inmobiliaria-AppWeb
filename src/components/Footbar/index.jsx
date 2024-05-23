@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Logo from '../../Imagenes/Logo-Flor-2.jpg';
 import { Link } from 'react-router-dom';
 
 function Footbar() {
@@ -10,10 +11,7 @@ function Footbar() {
             <div className="footer">
                 <div className='divF'>
                     <a href='/home'>
-                        <img
-                            src='https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png' alt='not found'
-                            className='iso'
-                        />
+                        <img src={Logo} alt='' className='logo-footbar' />
                     </a>
                     <ul>
                         <li>
@@ -37,20 +35,25 @@ function Footbar() {
                                 <p>Links</p>
                             </h2>
                             <div className='divLinks'>
-                                <Link>Ventas</Link>
-                                <Link>Alquileres</Link>
-                                <Link>Locales</Link>
+                                <Link to={'/venta'}>Ventas</Link>
+                                <Link to={'/alquiler'}>Alquileres</Link>
+                                <Link to={'/destacadas'}>Destacadas</Link>
+                                <Link to={'/contacto'}>Contacto</Link>
+                                <Link to={'/nosotros'}>Nosotros</Link>
                             </div>
                         </li>
 
-                        <li>
+                        {/* Redes */}
+                        <li>                            
                             <h2><p>Seguinos</p></h2>
-                            <a href='https://www.instagram.com/florm.bienesraices/'>
-                                <InstagramIcon className='iconosRedes' />
-                            </a>
-                            <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                                <WhatsAppIcon className='iconosRedes' />
-                            </a>
+                            <div className='cont-iconos-redes'>
+                                <a href='https://www.instagram.com/florm.bienesraices/'>
+                                    <InstagramIcon sx={{ fontSize: 40, color: 'white', backgroundColor: 'black', borderRadius: '10px'}} />
+                                </a>
+                                <a href='http://api.whatsapp.com/send?phone=2234422665'>
+                                    <WhatsAppIcon sx={{ fontSize: 40, color: 'green', backgroundColor: 'black', borderRadius: '10px', marginLeft: '10px'}} />
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>

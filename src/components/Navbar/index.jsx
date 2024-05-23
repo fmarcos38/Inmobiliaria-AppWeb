@@ -37,13 +37,18 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='#' >
-                                Oportunidades
+                            <NavLink to='/destacadas' >
+                                Destacadas
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/contacto' >
                                 Contacto
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/nosotros' >
+                                Nosotros
                             </NavLink>
                         </li>
                     </ul>

@@ -182,7 +182,7 @@
     position: absolute;
     justify-content: center;
     align-self: center;
-    top: 668px;
+    top: 680px;
     padding: 8px 10px;
     border-radius: 20px;
     background-color: rgba(239, 244, 242, 0.999);
@@ -254,7 +254,7 @@
         height: 550px;
     }
     .zocalo{
-        top: 570px;
+        top: 580px;
     }
     .contLanding{
         width: 90%;

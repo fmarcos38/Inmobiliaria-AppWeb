@@ -24,6 +24,7 @@ function Home() {
     const loading = useSelector(state => state.loading);
     const allProps = useSelector(state => state.propiedades);
     const dispatch = useDispatch();
+    
     useEffect(() => {
         dispatch(getProps());
     }, [dispatch]);

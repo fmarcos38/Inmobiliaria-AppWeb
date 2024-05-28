@@ -19,7 +19,7 @@ function Modal({imgProp}) {
                 className='btn-close-modal'
                 onClick={() => handleOnclickClose()}
             >
-                <HighlightOffIcon/>
+                <b>X</b>
             </button>
             <img src={imgProp} alt='not f' className='imgProp' />
         </div>

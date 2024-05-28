@@ -7,11 +7,7 @@ nav {
     align-items: center;
     width: 100%;
     height: auto;
-    /* margin-bottom: 10px; */
-    border-bottom: 1px solid #b1b5b5;
-    box-shadow: 0 0 10px #9a9d9d;
-    background-color: rgb(180, 243, 199);
-    z-index: 2; /* para que qde sobre cualq component */
+    background-color: #333;
 }
 .conteiner-navbar{
     display: flex;
@@ -44,10 +40,11 @@ nav {
 li {
     list-style: none;
     margin-right: 1.5rem;
-    color: black;
 }
-a {
+.navLink-Navbar{
+    color: var(--primary-color);
     text-decoration: none;
+    font-size: large;
 }
 
 /* lado der */
@@ -66,13 +63,14 @@ a {
 .direccion p {
     margin-left: 5px;
     margin-right: 5px;
+    color: var(--primary-color);
 }
 
 /* menu hambur pantalla chica*/
 .menu-icon span {
     width: 100%;
     height: 3px;
-    background-color: #333;
+    background-color: var(--primary-color);
     transition: all 0.3s ease;
 }
 .menu-icon.open span:nth-child(2) {
@@ -84,14 +82,12 @@ a {
 .menu-icon.open span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
-/* menu desplegable del hambur*/
-.menu {
+.menu-desplegable {
     position: absolute;
-    top: 70px;
-    right: 1;
-    background: #f9f9f9;
+    top: 50px;
+    right: 0;
+    background: rgb(53, 53, 53);
     width: 200px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -105,8 +101,15 @@ a {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+.link-navbar{
+    color: var(--primary-color);
+    text-decoration: none;
+}
 .menu li:hover {
-    background: #eaeaea;
+    background: var(--background-color);
+}
+.items-pChica{
+    margin: 10px 0 10px 0;
 }
 
 /* responsive */
@@ -163,8 +166,6 @@ a {
     nav {
         width: 100%;
         height: 3rem;
-        background: rgb(112, 233, 153);
-        background: radial-gradient(circle, rgba(115, 233, 154, 0.945) 11%, rgb(207, 160, 223) 100%);
     }
     .conteiner-navbar{        
         width: 90%;

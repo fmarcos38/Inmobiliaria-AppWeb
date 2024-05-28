@@ -1,117 +1,116 @@
-import React, { useEffect, useState } from 'react';
-import { filtraOperacionTipo, getProps, muestraDestacadas} from '../../Redux/Actions';
+import React, { useEffect,useState } from 'react'
 import { useDispatch } from 'react-redux';
-import FiltraPrecio from './FIltroRangoPrecio';
-import './estilos.css';
+import { filtraOperacionTipo, getProps, muestraDestacadas } from '../../Redux/Actions';
+import './estilos.css'; // Importar estilos CSS
 
-function Filtros({check}) {
+const Filtros = () => {
 
     //estado para check venta
-    const [ operacion, setOperacion ] = useState('all'); 
+    const [operacion, setTipo] = useState('all'); 
     const dispatch = useDispatch();
-    //funcion onChange para los checkbox
-    const handleOnChangeOperacion = (e) => {
-        const { value } = e.target;
-        setOperacion(value === operacion ? 'all' : value);
+    
+    const handleFilterChange = (event) => {
+        const { value } = event.target;
+        setTipo(value === operacion ? 'all' : value);
     };
-    //para los btns
+
     const handleClick = (e) => {
-        switch(e.target.id){
+        switch (e.target.id) {
             case 'depto':
-                if(operacion){;
+                if (operacion === 'venta') {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'depto'}));
-                }else if(operacion){
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'depto' }));
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'depto'}));
-                }else{
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'depto' }));
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'depto'}));
-                }                
+                    dispatch(filtraOperacionTipo({ tipo: 'depto' }));
+                }
                 break;
             case 'casa':
-                if(operacion){;
+                if (operacion === 'venta') {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'casa'}));
-                }else if(operacion){
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'casa' }));
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'casa'}));
-                }else{
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'casa' }));
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'casa'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'casa' }));
+                }
                 break;
             case 'ph':
-                if(operacion){;
+                if (operacion === 'venta') {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({operacion: 'venta', tipo: 'ph'}));
-                }else if(operacion){
+                    dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'ph' }));
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({operacion: 'alquiler', tipo: 'ph'}));
-                }else{
+                    dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'ph' }));
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'ph'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'ph' }));
+                }
                 break;
             case 'local':
-                if (operacion) {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'local' }));
-                }else if (operacion) {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'local' }));
-                }else{
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'local'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'local' }));
+                }
                 break;
             case 'terreno':
-                if (operacion) {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'terreno' }));
-                }else if (operacion) {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'terreno' }));
-                }else{
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'terreno'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'terreno' }));
+                }
                 break;
             case 'oficina':
-                if (operacion) {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'oficina' }));
-                }else if (operacion) {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'oficina' }));
-                }else{
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'oficina'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'oficina' }));
+                }
                 break;
             case 'cochera':
-                if (operacion) {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'venta', tipo: 'cochera' }));
-                }else if (operacion) {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(filtraOperacionTipo({ operacion: 'alquiler', tipo: 'cochera' }));
-                }else{
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'cochera'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'cochera' }));
+                }
                 break;
             case 'destacada':
-                if (operacion) {
+                if (operacion === 'venta') {
                     dispatch(getProps());
                     dispatch(muestraDestacadas({ operacion: 'venta', destacada: true }));
-                }else if (operacion) {
+                } else if (operacion === 'alquiler') {
                     dispatch(getProps());
                     dispatch(muestraDestacadas({ operacion: 'alquiler', destacada: true }));
-                }else{
+                } else {
                     dispatch(getProps());
-                    dispatch(filtraOperacionTipo({tipo: 'destacada'}));
-                } 
+                    dispatch(filtraOperacionTipo({ tipo: 'destacada' }));
+                }
                 break;
             case 'todas':
                 dispatch(getProps());
@@ -119,137 +118,64 @@ function Filtros({check}) {
             default:
                 break;
         }
-    }
+    };
 
-    //useEffect para actualizar estado global de las props
     useEffect(() => {
-        if (operacion === 'all') {
-            dispatch(getProps());
-        }
-        if (operacion === 'venta') {
-            dispatch(getProps());
-            dispatch(filtraOperacionTipo({ operacion: 'venta' }));
-        }
-        if (operacion === 'alquiler') {
-            dispatch(getProps());
-            dispatch(filtraOperacionTipo({ operacion: 'alquiler' }));
-        }
+        
+            if(operacion === 'all'){ dispatch(getProps()); }
+            if(operacion === 'venta'){ 
+                dispatch(getProps());
+                dispatch(filtraOperacionTipo({ operacion: 'venta' })); 
+            }
+            if(operacion === 'alquiler'){ 
+                dispatch(getProps());
+                dispatch(filtraOperacionTipo({ operacion: 'alquiler' })); 
+            }
+        
+        //dispatchAction();
     }, [dispatch, operacion]);
 
 
     return (
-        <div className='cont-principal-filtros'>
-            <div className='cont-filtros'>
-                {
-                    check ? (
-                        <div style={{'marginTop': '20px'}}></div>
-                    ) : (
-                        <div className='check-venta-alq'>
-                            <label className='label-venta'>Venta</label>
-                            <input
-                                id='check-venta'
-                                type='checkbox'
-                                value="venta" 
-                                className='input-venta'
-                                checked={operacion === 'venta'} /* esto quiere decir -> cuando está seleccionado operacion se vuelve venta */
-                                onChange={(e) => handleOnChangeOperacion(e)}
-                            />
-                            <label className='label-alq'>Alquiler</label>
-                            <input
-                                id='check-alquiler'
-                                type='checkbox' 
-                                value="alquiler"
-                                className='input-alq'
-                                checked={operacion === 'alquiler'}
-                                onChange={(e) => handleOnChangeOperacion(e)}
-                            />
-                        </div>
-                    )
-                }               
+        <div className='cont-filtros' >
+            <div className='cont-titulo-filtro'>
+                <p>Filtros</p>
+            </div>
 
-                <div className='cont-tipo-propiedad'>
-                    <div className='tipo-propiedad'>
-                        <button id='depto' onClick={(e) => handleClick(e)}>
-                            Deptos
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <button id='casa' onClick={(e) => handleClick(e)}>
-                            Casas
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <button id='ph' onClick={(e) => handleClick(e)}>
-                            PH
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
+            <div className='opc-venta-alq'>
+            <label>VENTA</label>
+                <input 
+                    id='venta'
+                        type="checkbox" 
+                        value="venta" 
+                        checked={operacion === 'venta'} 
+                        onChange={handleFilterChange}
+                        className='input-check-venta'
+                    />
+                <label> - ALQUILER</label>
+                <input 
+                    id='alquiler'
+                        type="checkbox" 
+                        value="alquiler" 
+                        checked={operacion === 'alquiler'} 
+                        onChange={handleFilterChange}
+                        className='input-check-alq' 
+                    />
+            </div>
 
-                    <div>
-                        <button id='local' onClick={(e) => handleClick(e)}>
-                            Locales
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <button id='terreno' onClick={(e) => handleClick(e)}>
-                            Terreno
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <button id='oficina' onClick={(e) => handleClick(e)}>
-                            Oficinas
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <button id='cochera' onClick={(e) => handleClick(e)}>
-                            Cocheras
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-
-                    <div>
-                        <button className='btn-props-dest' id='destacada' onClick={(e) => handleClick(e)}>
-                            Propiedades destacadas
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-
-                    <div>
-                        <button id='todas' className='btn-props-dest' onClick={(e) => handleClick(e)}>
-                            Todas las Propiedades
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-
-                <div className='cont-filtra-precio'>
-                    <FiltraPrecio operacion={operacion}/>
-                </div>
+            <div className='cont-btn-filtros'>
+                <button className='btn-filtros' id='depto' onClick={(e) => handleClick(e)}>Deptos</button>
+                <button className='btn-filtros' id='casa' onClick={(e) => handleClick(e)}>Casas</button>
+                <button className='btn-filtros' id='ph' onClick={(e) => handleClick(e)}>PH</button>
+                <button className='btn-filtros' id='local' onClick={(e) => handleClick(e)}>Locales</button>
+                <button className='btn-filtros' id='terreno' onClick={(e) => handleClick(e)}>Terrenos</button>
+                <button className='btn-filtros' id='oficina' onClick={(e) => handleClick(e)}>Oficinas</button>
+                <button className='btn-filtros' id='cochera' onClick={(e) => handleClick(e)}>Cocheras</button>
+                <button className='btn-filtros'  id='destacada' onClick={(e) => handleClick(e)}>Destacadas</button>
+                <button className='btn-filtros' id='todas'  onClick={(e) => handleClick(e)}>Alquiler Temporario</button>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Filtros;

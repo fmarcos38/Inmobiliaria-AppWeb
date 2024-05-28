@@ -27,27 +27,27 @@ function Navbar() {
                     {/* menu SOLO Pantalla Grande*/}
                     <ul className='ul-menu-izq'>
                         <li>
-                            <NavLink to='/venta' >
+                            <NavLink to='/venta' className={'navLink-Navbar'}>
                                 Venta
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/alquiler' >
+                            <NavLink to='/alquiler' className={'navLink-Navbar'}>
                                 Alquileres
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/destacadas' >
+                            <NavLink to='/destacadas' className={'navLink-Navbar'}>
                                 Destacadas
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/contacto' >
+                            <NavLink to='/contacto' className={'navLink-Navbar'}>
                                 Contacto
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/nosotros' >
+                            <NavLink to='/nosotros' className={'navLink-Navbar'}>
                                 Nosotros
                             </NavLink>
                         </li>
@@ -62,37 +62,43 @@ function Navbar() {
                         <p>Sarmiento 2323</p>
                         <LocalPhoneIcon />
                         <p>2234422665</p>
-                    </div>                                                
-
-                    {/* menu hambur P.Chica */}
-                    <div 
-                        className={`menu-icon ${isOpen ? 'open' : ''}`} 
-                        onClick={toggleMenu}
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
                     </div>
-                    {/* menu desplegable P.chica*/}
-                    <div className="menu">
-                        {
-                            isOpen && (
-                                <ul>
-                                    <li>
-                                        <Link to='/'>Home</Link>
-                                    </li>
-                                    <li>
-                                        <Link to='/venta'>Venta</Link>
-                                    </li>
-                                    <li>
-                                        <Link to='/alquiler'>Alquiler</Link>
-                                    </li>
-                                    <li>
-                                        <Link to='/nosotros'>Nosotros</Link>
-                                    </li>
-                                </ul>
-                            )
-                        }
+
+                    {/* menu hambur y desplegable P.Chica */}
+                    <div className='colInf-3'>
+                        {/* menu hambur P.Chica */}
+                        <div
+                            className={`menu-icon ${isOpen ? 'open' : ''}`}
+                            onClick={toggleMenu}
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        {/* menu desplegable P.chica*/}
+                        <div className="menu-desplegable">
+                            {
+                                isOpen && (
+                                    <ul className='na-lista-pChica'>
+                                        <li className='items-pChica'>
+                                            <Link to='/' className='link-navbar'>Home</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/venta' className='link-navbar'>Venta</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/alquiler' className='link-navbar'>Alquiler</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/nosotros' className='link-navbar'>Nosotros</Link>
+                                        </li>
+                                        <li className='items-pChica'>
+                                            <Link to='/contacto' className='link-navbar'>Contacto</Link>
+                                        </li>
+                                    </ul>
+                                )
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

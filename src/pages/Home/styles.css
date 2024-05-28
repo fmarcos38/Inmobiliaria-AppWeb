@@ -141,6 +141,13 @@
     font-size: 1.5rem;
     margin: 0 0 5px 0;
 }
+.texto-col3-texto-link{
+    width: 70px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
 .cont-texto-btn{
     display: flex;
     justify-content: center;
@@ -165,15 +172,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65%;
+    width: auto;
+    margin-bottom: 10px;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px;
+    color: var(--primary-color);
+    background-color: var(--background-color);
 }
 .iconoExplorarProps{
     width: 30px;
     margin-left: 5px;
+    color: var(--primary-color);
 }
 .zocalo {
     position: absolute;
@@ -211,11 +223,20 @@
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 20px;
-    color: rgba(129, 239, 202, 0.952);
-    background: rgb(128, 76, 160);
-    background: radial-gradient(circle, rgba(150, 87, 189, 0.945) 43%, rgba(175,126,191,1) 85%);
+    color: var(--primary-color);
+    background-color: var(--background-color);
 }
-
+.cont-contacto-pant-ch{
+    margin-top: 10px;
+}
+.linkContacto{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.texto-contactar-p-chica{
+    color: var(--primary-color);
+    margin: 0;
+}
 /* responsive */
 @media screen and (max-width: 1200px) /* and (min-width: 999px) */{
     /* cont col 1 */

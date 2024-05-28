@@ -72,7 +72,7 @@ function Home() {
                                             <p className='texto-col3-texto'>Realizamos tasaciones, acesoramos</p>
                                             <p className='texto-col3-nuestroClientes'><b>Nuestros clientes nos avalan</b></p>
                                             <Link to={'/formularioContacto'} className='linkContacto'>
-                                                <p className='texto-col3-texto-link'>No dudes en contactartos</p>
+                                                <p className='texto-col3-texto-link'>Contactar</p>
                                             </Link>
                                             <div className='cont-texto-btn'>
                                                 <a href='#explorarProps' className='a-explorarProps'>
@@ -102,10 +102,14 @@ function Home() {
                                 <p className='texto-col3-texto'>Realizamos tazaciones, acesoramiento.</p>
                                 <InsertEmoticonIcon style={{ 'font-size': '35px' }} />
                                 <p className='texto-col3-nuestroClientes'><b>Nuestros clientes nos avalan</b></p>
-                                <Link to={'/formularioContacto'} className='linkContacto'>
-                                    <p className='texto-col3-texto-link'>Click aquí si queres ponerte en contacto</p>
-                                    <CallIcon />
-                                </Link>
+                                    <div className='cont-contacto-pant-ch'>
+                                        <Link to={'/contacto'} className='linkContacto'>
+                                            <p className='texto-contactar-p-chica'>
+                                                <em>Click aquí si queres ponerte en contacto</em>
+                                            </p>
+                                            <CallIcon />
+                                        </Link>
+                                    </div>
                             </div>
                         </div>
 

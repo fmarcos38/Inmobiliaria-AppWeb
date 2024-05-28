@@ -1,5 +1,6 @@
-.App{
-    background-color: aliceblue;
+:root {
+    --primary-color: rgb(200, 200, 93);
+    --background-color: rgb(43, 42, 42);
 }
 
 

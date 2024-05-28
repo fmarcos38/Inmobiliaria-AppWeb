@@ -14,6 +14,7 @@
     font-family: roboto;
     text-align: center;
     margin: 10px;
+    border-radius: 20px 20px 0px 0px;
 }
 /* espacio titulo */
 .card-title {
@@ -21,8 +22,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(243, 247, 244);
-    background-color: rgb(19, 19, 19);;
+    color: rgb(8, 8, 8);
+    background-color: rgba(187, 193, 193, 0.74);
+    border-radius: 20px 20px 0px 0px;
     
 }
 /* manejo espacio img */

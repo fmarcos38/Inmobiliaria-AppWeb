@@ -10,10 +10,12 @@ function Footbar() {
         <footer className='contFooter'>
             <div className="footer">
                 <div className='divF'>
+                    {/* logo */}
                     <a href='/home'>
                         <img src={Logo} alt='' className='logo-footbar' />
                     </a>
                     <ul>
+                        {/* Contactanos */}
                         <li>
                             <h2>
                                 <p>CONTACTANOS</p>
@@ -29,29 +31,28 @@ function Footbar() {
                                 <br></br>
                             </p>
                         </li>
-
+                        {/* Links */}
                         <li>
                             <h2>
                                 <p>Links</p>
                             </h2>
                             <div className='divLinks'>
-                                <Link to={'/venta'}>Ventas</Link>
-                                <Link to={'/alquiler'}>Alquileres</Link>
-                                <Link to={'/destacadas'}>Destacadas</Link>
-                                <Link to={'/contacto'}>Contacto</Link>
-                                <Link to={'/nosotros'}>Nosotros</Link>
+                                <Link to={'/venta'} className='link-foot'>Ventas</Link>
+                                <Link to={'/alquiler'} className='link-foot'>Alquileres</Link>
+                                <Link to={'/destacadas'} className='link-foot'>Destacadas</Link>
+                                <Link to={'/contacto'} className='link-foot'>Contacto</Link>
+                                <Link to={'/nosotros'} className='link-foot'>Nosotros</Link>
                             </div>
                         </li>
-
                         {/* Redes */}
                         <li>                            
                             <h2><p>Seguinos</p></h2>
                             <div className='cont-iconos-redes'>
                                 <a href='https://www.instagram.com/florm.bienesraices/'>
-                                    <InstagramIcon sx={{ fontSize: 40, color: 'white', backgroundColor: 'black', borderRadius: '10px'}} />
+                                    <InstagramIcon className='icono-foot' sx={{fontSize: '35px'}}/>
                                 </a>
                                 <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                                    <WhatsAppIcon sx={{ fontSize: 40, color: 'green', backgroundColor: 'black', borderRadius: '10px', marginLeft: '10px'}} />
+                                    <WhatsAppIcon className='icono-foot' sx={{fontSize: '35px'}}/>
                                 </a>
                             </div>
                         </li>
@@ -70,55 +71,3 @@ function Footbar() {
 }
 
 export default Footbar;
-
-
-
-/*
-
-<div className='contFoot'>
-                
-                <div className="col1">
-                    <a href='/home'>
-                        <img src='https://upload.wikimedia.org/wikipedia/commons/6/62/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.png' alt='not found' className='logoFooter' />
-                    </a>
-                </div>
-                
-                <div className="col2">
-                    <div className='tituloCategFoot'>
-                        <h2>CONTACTANOS</h2>
-                        <div className="line"></div>
-                    </div>
-                    
-                    <p>Belgrano 2214 - Mar del Plata</p>
-                    <p>Teléfono (0223) 4915977</p>
-                    <p>Whatsapp +54 9 (223) 6349596</p>
-                    <p>info@belluccipropiedades.com</p>
-                </div>
-
-                <div className="col2">
-                    <div className='tituloCategFoot'>
-                        <h2>LINKS</h2>
-                        <div className="line"></div>
-                    </div>
-                    
-                    <Link>Ventas</Link>
-                    <Link>Alquileres</Link>
-                    <Link>Locales</Link>
-                    
-                </div>
-                
-                <div className="column col4">
-                    <div className='redesFoot'>
-                        <h2>SEGUINOS EN</h2>
-                        <a href='https://www.instagram.com/florm.bienesraices/'>
-                            <InstagramIcon className='iconosRedes' />
-                        </a>
-                        <a href='http://api.whatsapp.com/send?phone=2234422665'>
-                            <WhatsAppIcon className='iconosRedes' />
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-*/

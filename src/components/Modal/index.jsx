@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css';
 import { useDispatch } from 'react-redux';
 import { isOpenModalPicture } from '../../Redux/Actions';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 function Modal({imgProp}) {
 

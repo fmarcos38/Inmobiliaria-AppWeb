@@ -6,7 +6,7 @@ import Footbar from './components/Footbar';
 import Card from './components/Card';
 import Carrusel from './components/Carrusel';
 import Modal from './components/Modal';
-import ContactForm from './components/FormularioContacto';
+import Contactanos from './pages/Contactanos';
 import Home from './pages/Home';
 import DetalleProp from './pages/DetallePropiedad';
 import PropsVenta from './pages/PropsVenta';
@@ -32,7 +32,7 @@ function App() {
         <Route path='/alquiler' element={<PropsAlquiler/>} />
         <Route path='/destacadas' element={<PropsDestacadas/>} />
         <Route path='/nosotros' element={<Nosotros/>} />
-        <Route path='/contacto' element={<ContactForm/>} />
+        <Route path='/contacto' element={<Contactanos/>} />
 
         {/* rutas para el desarrollador */}
         <Route path='/card' element={<Card/>}/>

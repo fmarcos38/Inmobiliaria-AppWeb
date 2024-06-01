@@ -13,7 +13,8 @@ function PropsVenta() {
 
     return (
         <div className='cont-propsVenta'>
-            <Filtros check={true}/>
+            <h1>Nuestras Propiedades en venta</h1>
+            <Filtros muestraVentaAlq={false}/>            
             <ListaPropiedades props={soloEnVenta} />
         </div>
     )

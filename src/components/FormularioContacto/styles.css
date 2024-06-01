@@ -12,8 +12,7 @@
     align-items: center;
     width: 400px;
     height: 400px;
-    color: #fff;
-    background-color: rgb(180, 243, 199);
+    background-color: var(--background-color);
     border-radius: 20px;
 }
 .form__group {
@@ -48,7 +47,7 @@
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #0d0d0d;
+    color: var(--primary-color);
     pointer-events: none;
 }
 .form__field:focus {

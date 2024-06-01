@@ -71,7 +71,7 @@ function Home() {
                                             <p className='texto-col3-vender'><b>Queres vender</b></p>
                                             <p className='texto-col3-texto'>Realizamos tasaciones, acesoramos</p>
                                             <p className='texto-col3-nuestroClientes'><b>Nuestros clientes nos avalan</b></p>
-                                            <Link to={'/formularioContacto'} className='linkContacto'>
+                                            <Link to={'/contacto'} className='linkContacto'>
                                                 <p className='texto-col3-texto-link'>Contactar</p>
                                             </Link>
                                             <div className='cont-texto-btn'>
@@ -115,7 +115,7 @@ function Home() {
 
                         {/* filtros */}
                         <div id='explorarProps'>
-                            <Filtros />
+                            <Filtros muestraVentaAlq={true}/>
                         </div>
 
                         {/* lista props */}

@@ -11,12 +11,10 @@ function PropsDestacadas() {
 
 
     return (
-        <div className='cont-prop-Venta'>
-            <Filtros check={false}/> {/* check es para cuando estoy en la vista/pagina Venta/Alquiler NO muestre los checks de venta/alquiler */}
-            <div className='cont-titulo-props-venta'> 
-                <h1>Propiedades Destacadas</h1>
-                <ListaPropiedades props={destacadas} />                
-            </div>            
+        <div className='cont-propsVenta'>
+            <h1>Nuestras Propiedades destacadas</h1>
+            <Filtros muestraVentaAlq={false}/>            
+            <ListaPropiedades props={destacadas} />
         </div>
     )
 }

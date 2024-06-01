@@ -13,7 +13,8 @@ function PropsAlquiler() {
 
     return (
         <div className='cont-propsVenta'>
-            <Filtros check={true}/>
+            <h1>Nuestras Propiedades en alquiler</h1>
+            <Filtros muestraVentaAlq={false}/>            
             <ListaPropiedades props={soloEnAlq} />
         </div>
     )

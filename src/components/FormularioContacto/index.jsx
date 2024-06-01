@@ -39,7 +39,7 @@ const ContactForm = () => {
                         <label class="form__label" for="name">Mensaje</label>
                     </div>
                     <div className='btn-enviar-contacto'>
-                        <Button variant="outlined" type="submit" >Enviar</Button>
+                        <Button style={{color: 'var(--primary-color)'}} variant="outlined" type="submit" >Enviar</Button>
                     </div>
                 </div>
             </form>

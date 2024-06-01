@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { filtraOperacionTipo, getProps, muestraDestacadas } from '../../Redux/Actions';
 import './estilos.css'; // Importar estilos CSS
 
-const Filtros = () => {
+const Filtros = ({muestraVentaAlq}) => {
 
     //estado para check venta
     const [operacion, setTipo] = useState('all'); 
@@ -142,26 +142,29 @@ const Filtros = () => {
                 <p>Filtros</p>
             </div>
 
-            <div className='opc-venta-alq'>
-            <label>VENTA</label>
-                <input 
-                    id='venta'
-                        type="checkbox" 
-                        value="venta" 
-                        checked={operacion === 'venta'} 
+            {
+                muestraVentaAlq === true &&
+                <div className='opc-venta-alq'>
+                    <label>VENTA</label>
+                    <input
+                        id='venta'
+                        type="checkbox"
+                        value="venta"
+                        checked={operacion === 'venta'}
                         onChange={handleFilterChange}
                         className='input-check-venta'
                     />
-                <label> - ALQUILER</label>
-                <input 
-                    id='alquiler'
-                        type="checkbox" 
-                        value="alquiler" 
-                        checked={operacion === 'alquiler'} 
+                    <label> - ALQUILER</label>
+                    <input
+                        id='alquiler'
+                        type="checkbox"
+                        value="alquiler"
+                        checked={operacion === 'alquiler'}
                         onChange={handleFilterChange}
-                        className='input-check-alq' 
+                        className='input-check-alq'
                     />
-            </div>
+                </div>
+            }
 
             <div className='cont-btn-filtros'>
                 <button className='btn-filtros' id='depto' onClick={(e) => handleClick(e)}>Deptos</button>

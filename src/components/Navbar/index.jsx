@@ -37,6 +37,16 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink to='/alquilerTemp' className={'navLink-Navbar'}>
+                                Alq. Temporales
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/emprendimientos' className={'navLink-Navbar'}>
+                                Emprendimientos
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink to='/destacadas' className={'navLink-Navbar'}>
                                 Destacadas
                             </NavLink>

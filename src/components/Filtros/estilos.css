@@ -3,18 +3,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
   background-color: var(--background-color);
 }
 /* est. 1er div */
 .cont-titulo-filtro {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
-.cont-titulo-filtro p {
+.cont-titulo-filtro > p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,8 +39,8 @@
 .cont-btn-filtros {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 90%;
-  margin-bottom: 20px;
 }
 .btn-filtros {
   width: 100px;

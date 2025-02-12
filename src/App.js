@@ -14,6 +14,8 @@ import PropsAlquiler from './pages/PropsAlquiler';
 import Nosotros from './pages/Nosotros';
 import PropsDestacadas from './pages/Destacadas';
 import { InmobiliariaProvider } from './Context';
+import AlquilerTemp from './pages/AlqTemp';
+import Emprendimientos from './pages/Emprendimientos';
 
 
 
@@ -30,6 +32,8 @@ function App() {
         <Route path='/detalle/:id' element={<DetalleProp/>}/>
         <Route path='/venta' element={<PropsVenta/>} />
         <Route path='/alquiler' element={<PropsAlquiler/>} />
+        <Route path='/alquilerTemp' element={<AlquilerTemp/>} />
+        <Route path='/emprendimientos' element={<Emprendimientos/>} />
         <Route path='/destacadas' element={<PropsDestacadas/>} />
         <Route path='/nosotros' element={<Nosotros/>} />
         <Route path='/contacto' element={<Contactanos/>} />

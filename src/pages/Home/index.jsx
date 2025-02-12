@@ -114,7 +114,7 @@ function Home() {
                         </div>
 
                         {/* filtros */}
-                        <div id='explorarProps'>
+                        <div id='explorarProps' className='cont-filtros-home'>
                             <Filtros muestraVentaAlq={true}/>
                         </div>
 

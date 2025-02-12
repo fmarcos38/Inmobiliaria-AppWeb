@@ -1,4 +1,3 @@
-
 .contGralLanding-imagen{
     /* position: relative; */
     width: 100%;
@@ -200,7 +199,15 @@
     border-radius: 20px;
     background-color: rgba(239, 244, 242, 0.999);
 }
-
+.cont-filtros-home{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
 /* propiedades Home Pantalla Chica */
 .home-pantChica {
     width: 100%;

@@ -138,10 +138,6 @@ const Filtros = ({muestraVentaAlq}) => {
 
     return (
         <div className='cont-filtros' >
-            <div className='cont-titulo-filtro'>
-                <p>Filtros</p>
-            </div>
-
             {
                 muestraVentaAlq === true &&
                 <div className='opc-venta-alq'>

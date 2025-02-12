@@ -69,9 +69,9 @@ function Navbar() {
                     {/* menu Derecho Pantalla Grande */}            
                     <div className='direccion'>
                         <LocationOnIcon />
-                        <p>Sarmiento 2323</p>
+                        <p className='dir-tel'>Sarmiento 2323</p>
                         <LocalPhoneIcon />
-                        <p>2234422665</p>
+                        <p className='dir-tel'>2234422665</p>
                     </div>
 
                     {/* menu hambur y desplegable P.Chica */}

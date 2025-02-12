@@ -8,7 +8,6 @@ export const InmobiliariaProvider = ({children}) => {
 
     //estado para menú hamburguesa
     const [ isOpenModalVideo, setisOpenModalVideo ] = useState(false);
-    console.log("estadoM:", isOpenModalVideo)
 
     const handleIsOpen = () => {
         setisOpenModalVideo(true);

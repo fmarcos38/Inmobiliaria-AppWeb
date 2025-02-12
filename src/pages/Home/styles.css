@@ -232,7 +232,7 @@
     margin-bottom: 20px;
     border-radius: 20px;
     color: var(--primary-color);
-    background-color: var(--background-color);
+    background-color: rgba(43, 42, 42, 0.675);
 }
 .cont-contacto-pant-ch{
     margin-top: 10px;
@@ -386,6 +386,10 @@
     }
     .texto-col3-nuestroClientes, .texto-col3-texto-link{
         margin: 0;
+    }
+    .cont-filtros-home{
+        height: auto;
+        padding: 5px 0;
     }
 }
 @media screen and (max-width: 450px) {    
